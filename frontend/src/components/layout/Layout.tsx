@@ -45,9 +45,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const menuItems = [
-    { text: 'Dashboard Gestão', icon: <Dashboard />, path: '/gestao' },
-    { text: 'Dashboard Técnico', icon: <Engineering />, path: '/tecnico' },
-    { text: 'Dashboard Público', icon: <Public />, path: '/publico' },
     { text: 'Economia', icon: <TrendingUp />, path: '/economia' },
   ];
 

@@ -7,6 +7,7 @@ import os
 from routes.bairros import bairros_bp
 from routes.indicadores_v2 import indicadores_bp
 from routes.economia import economia_bp
+from routes.anomalias import anomalias_bp
 
 app = Flask(__name__)
 CORS(app)
@@ -25,6 +26,7 @@ db.init_app(app)
 app.register_blueprint(bairros_bp, url_prefix='/api')
 app.register_blueprint(indicadores_bp, url_prefix='/api')
 app.register_blueprint(economia_bp, url_prefix='/api')
+app.register_blueprint(anomalias_bp, url_prefix='/api/anomalias')
 
 @app.route('/api/health', methods=['GET'])
 def health_check():
@@ -65,6 +67,15 @@ def info():
                 'GET /api/indicadores/serie-temporal/<indicador>': 'Série temporal',
                 'GET /api/indicadores/comparacao-regioes': 'Comparação entre regiões',
                 'GET /api/indicadores/baseline/<indicador>': 'Valores normais (baseline)'
+            },
+            'anomalias': {
+                'GET /api/anomalias/detectar': 'Detecta anomalias nos dados',
+                'GET /api/anomalias/alertas': 'Lista alertas ativos',
+                'GET /api/anomalias/alertas-impactos': 'Alertas com análise de impactos cruzados (NOVO)',
+                'GET /api/anomalias/alertas-impactos/<id>': 'Detalhes de alerta específico com impactos (NOVO)',
+                'GET /api/anomalias/categorias': 'Categorias e severidades disponíveis (NOVO)',
+                'GET /api/anomalias/historico': 'Histórico de anomalias',
+                'GET /api/anomalias/dashboard': 'Dashboard de anomalias'
             }
         },
         'filtros_disponiveis': {
@@ -72,7 +83,9 @@ def info():
             'regiao': 'Norte, Sul, Leste, Oeste, Centro',
             'ano_inicio': 'Ano inicial (padrão: 2020)',
             'ano_fim': 'Ano final (padrão: 2023)',
-            'cnae_id': 'ID da CNAE'
+            'cnae_id': 'ID da CNAE',
+            'categoria': 'Categoria do alerta (economia, saude, educacao, etc)',
+            'severidade': 'Severidade do alerta (critico, atencao, informativo)'
         }
     }), 200
 

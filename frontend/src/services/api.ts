@@ -98,6 +98,16 @@ export const anomaliasAPI = {
     api.get('/anomalias/historico', { params: { limite } }),
   
   getDashboard: () => api.get('/anomalias/dashboard'),
+  
+  // NOVO: Alertas com análise de impactos cruzados
+  getAlertasComImpactos: (categoria?: string, severidade?: string) =>
+    api.get('/anomalias/alertas-impactos', { params: { categoria, severidade } }),
+  
+  getAlertaDetalhes: (id: number) =>
+    api.get(`/anomalias/alertas-impactos/${id}`),
+  
+  getCategorias: () =>
+    api.get('/anomalias/categorias'),
 };
 
 // ===== EXPORTAÇÃO =====
