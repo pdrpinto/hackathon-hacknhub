@@ -278,3 +278,39 @@ SELECT 'Baselines calculados:', COUNT(*) FROM baseline_indicadores
 UNION ALL
 SELECT 'IDH por bairro:', COUNT(*) FROM idh_bairro;
 
+-- =====================================================
+-- 8. PIB MUNICIPAL (ANO 2021) - VALORES EM R$ x1000
+--    Fonte IBGE - fornecido pelo usuário
+-- =====================================================
+
+INSERT INTO pib_municipal (
+    ano, municipio,
+    pib_total_mil,
+    impostos_liquidos_mil,
+    pib_per_capita,
+    vab_total_mil,
+    agropecuaria_mil,
+    industria_mil,
+    servicos_privados_mil,
+    administracao_publica_mil
+) VALUES (
+    2021, 'Cascavel',
+    15787528.279,
+    2214717.231,
+    46976.49,
+    13572811.048,
+    1206734.268,
+    2651368.272,
+    8089960.287,
+    1624748.221
+) ON CONFLICT (ano, municipio) DO UPDATE SET
+    pib_total_mil = EXCLUDED.pib_total_mil,
+    impostos_liquidos_mil = EXCLUDED.impostos_liquidos_mil,
+    pib_per_capita = EXCLUDED.pib_per_capita,
+    vab_total_mil = EXCLUDED.vab_total_mil,
+    agropecuaria_mil = EXCLUDED.agropecuaria_mil,
+    industria_mil = EXCLUDED.industria_mil,
+    servicos_privados_mil = EXCLUDED.servicos_privados_mil,
+    administracao_publica_mil = EXCLUDED.administracao_publica_mil;
+
+

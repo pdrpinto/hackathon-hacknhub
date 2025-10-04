@@ -5,6 +5,7 @@ import csv
 import io
 from services.ingest_caged import ingest_caged_mock
 from services.ingest_empresas import pipeline_completo, gerar_empresas_mock, agregar_para_empresas_bairro
+from services.demo_seed import run_demo_seed
 
 
 economia_bp = Blueprint('economia', __name__)
@@ -26,6 +27,45 @@ def _apply_common_filters(where_clauses, params):
         params['cnae_id'] = cnae_id
 
     return where_clauses, params
+
+
+@economia_bp.route('/economia/pib', methods=['GET'])
+def get_pib_municipal():
+    try:
+        ano = request.args.get('ano', type=int) or 2021
+        query = text("""
+            SELECT ano,
+                   municipio,
+                   pib_total_mil,
+                   impostos_liquidos_mil,
+                   pib_per_capita,
+                   vab_total_mil,
+                   agropecuaria_mil,
+                   industria_mil,
+                   servicos_privados_mil,
+                   administracao_publica_mil
+            FROM pib_municipal
+            WHERE ano = :ano AND municipio = 'Cascavel'
+        """)
+        row = db.session.execute(query, {'ano': ano}).fetchone()
+        if not row:
+            return jsonify({'sucesso': True, 'dados': None, 'mensagem': 'PIB não encontrado para o ano informado'}), 200
+
+        dados = {
+            'ano': row.ano,
+            'municipio': row.municipio,
+            'pib_total_mil': float(row.pib_total_mil) if row.pib_total_mil is not None else None,
+            'impostos_liquidos_mil': float(row.impostos_liquidos_mil) if row.impostos_liquidos_mil is not None else None,
+            'pib_per_capita': float(row.pib_per_capita) if row.pib_per_capita is not None else None,
+            'vab_total_mil': float(row.vab_total_mil) if row.vab_total_mil is not None else None,
+            'agropecuaria_mil': float(row.agropecuaria_mil) if row.agropecuaria_mil is not None else None,
+            'industria_mil': float(row.industria_mil) if row.industria_mil is not None else None,
+            'servicos_privados_mil': float(row.servicos_privados_mil) if row.servicos_privados_mil is not None else None,
+            'administracao_publica_mil': float(row.administracao_publica_mil) if row.administracao_publica_mil is not None else None,
+        }
+        return jsonify({'sucesso': True, 'dados': dados}), 200
+    except Exception as e:
+        return jsonify({'sucesso': False, 'erro': str(e)}), 500
 
 
 @economia_bp.route('/economia/kpis', methods=['GET'])
@@ -191,6 +231,21 @@ def post_ingest_empresas():
     except Exception as e:
         return jsonify({'ok': False, 'erro': str(e)}), 500
 
+
+@economia_bp.route('/economia/seed-demo', methods=['POST'])
+def post_seed_demo():
+    """
+    Popula banco com dados de demonstração (bairros, CNAE, indicadores, empresas, PIB).
+    Insere apenas se tabelas estiverem vazias ou registros não existirem.
+    """
+    try:
+        body = request.get_json() or {}
+        ano_indicadores = body.get('ano_indicadores', 2023)
+        ano_empresas = body.get('ano_empresas', 2023)
+        res = run_demo_seed(ano_indicadores=ano_indicadores, ano_empresas=ano_empresas)
+        return jsonify({'ok': True, 'dados': res}), 200
+    except Exception as e:
+        return jsonify({'ok': False, 'erro': str(e)}), 500
 
 @economia_bp.route('/economia/empresas/cadastro', methods=['GET'])
 def get_empresas_cadastro():

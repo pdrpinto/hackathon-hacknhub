@@ -125,6 +125,9 @@ export const economiaAPI = {
 
   exportCSV: (params: { ano?: number; bairro_id?: number; regiao?: string; cnae_id?: number } = {}) =>
     api.get('/economia/export/csv', { params, responseType: 'blob' }),
+
+  getPIB: (params: { ano?: number } = {}) =>
+    api.get('/economia/pib', { params }),
 };
 
 // ===== ECONOMIA MOCK (CAGED) =====

@@ -108,6 +108,25 @@ CREATE TABLE empresas_bairro (
 CREATE INDEX idx_empresas_bairro ON empresas_bairro(bairro_id, cnae_id, ano);
 
 -- =====================================================
+-- TABELA: PIB MUNICIPAL (ANUAL)
+-- =====================================================
+DROP TABLE IF EXISTS pib_municipal CASCADE;
+CREATE TABLE pib_municipal (
+    id SERIAL PRIMARY KEY,
+    ano INTEGER NOT NULL,
+    municipio VARCHAR(120) DEFAULT 'Cascavel',
+    pib_total_mil DECIMAL(18,3), -- R$ x1000
+    vab_total_mil DECIMAL(18,3), -- R$ x1000
+    impostos_liquidos_mil DECIMAL(18,3), -- R$ x1000
+    agropecuaria_mil DECIMAL(18,3), -- R$ x1000
+    industria_mil DECIMAL(18,3), -- R$ x1000
+    servicos_privados_mil DECIMAL(18,3), -- R$ x1000 (exclui adm pública)
+    administracao_publica_mil DECIMAL(18,3), -- R$ x1000
+    pib_per_capita DECIMAL(18,2), -- R$
+    UNIQUE(ano, municipio)
+);
+
+-- =====================================================
 -- TABELA: BASELINE (VALORES NORMAIS) POR INDICADOR
 -- =====================================================
 DROP TABLE IF EXISTS baseline_indicadores CASCADE;

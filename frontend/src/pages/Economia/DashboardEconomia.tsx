@@ -13,6 +13,7 @@ const DashboardEconomia: React.FC = () => {
   const [ano, setAno] = useState<number>(2023);
 
   const [kpis, setKpis] = useState<any | null>(null);
+  const [pib, setPib] = useState<any | null>(null);
   const [serieEmpresas, setSerieEmpresas] = useState<any[]>([]);
   const [topCNAE, setTopCNAE] = useState<any[]>([]);
 
@@ -27,16 +28,18 @@ const DashboardEconomia: React.FC = () => {
 
       const anoReq = filtros?.anoFim || ano;
 
-      const [kpisRes, serieRes, topRes] = await Promise.all([
+      const [kpisRes, serieRes, topRes, pibRes] = await Promise.all([
         API.economiaAPI.getKPIs({ ano: anoReq, bairro_id: filtros?.bairro_id, regiao: filtros?.regiao, cnae_id: filtros?.cnae_id }),
         API.economiaAPI.getSerie({ indicador: metricaSerie, ano_inicio: filtros?.anoInicio || 2020, ano_fim: anoReq, bairro_id: filtros?.bairro_id, regiao: filtros?.regiao, cnae_id: filtros?.cnae_id }),
-        API.economiaAPI.getTopCNAE({ ano: anoReq, metric: metricaTop, limit: 10, bairro_id: filtros?.bairro_id, regiao: filtros?.regiao })
+        API.economiaAPI.getTopCNAE({ ano: anoReq, metric: metricaTop, limit: 10, bairro_id: filtros?.bairro_id, regiao: filtros?.regiao }),
+        API.economiaAPI.getPIB({ ano: anoReq })
       ]);
 
       setAno(anoReq);
       setKpis(kpisRes.data.dados);
       setSerieEmpresas(serieRes.data.dados || []);
       setTopCNAE((topRes.data.dados || []).map((d: any) => ({ ...d, nome: `${d.codigo} - ${d.descricao}` })));
+      setPib(pibRes.data.dados || null);
     } catch (e: any) {
       console.error(e);
       setErro('Erro ao carregar dados econômicos');
@@ -116,6 +119,64 @@ const DashboardEconomia: React.FC = () => {
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
           <KPICard title="Ticket Médio (R$)" value={kpis?.ticket_medio_salarial || 0} formato="moeda" />
+        </Grid>
+      </Grid>
+
+      {/* Seção Populacional - PIB */}
+      <Typography variant="h6" gutterBottom fontWeight={600} sx={{ mb: 2 }}>Populacional • PIB Municipal ({ano})</Typography>
+      <Grid container spacing={3} sx={{ mb: 4 }}>
+        <Grid item xs={12} sm={6} md={3}>
+          <KPICard title="PIB Total" value={pib?.pib_total_mil ? (pib.pib_total_mil * 1000) : 0} formato="moeda" subtitle="Preços correntes" />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <KPICard title="PIB per capita" value={pib?.pib_per_capita || 0} formato="moeda" />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <KPICard title="VAB Total" value={pib?.vab_total_mil ? (pib.vab_total_mil * 1000) : 0} formato="moeda" subtitle="A preços básicos" />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <KPICard title="Impostos Líquidos" value={pib?.impostos_liquidos_mil ? (pib.impostos_liquidos_mil * 1000) : 0} formato="moeda" />
+        </Grid>
+      </Grid>
+
+      <Grid container spacing={3} sx={{ mb: 4 }}>
+        <Grid item xs={12} md={6}>
+          <BarChart
+            data={[{
+              nome: 'Composição do VAB',
+              Agropecuária: pib?.agropecuaria_mil || 0,
+              Indústria: pib?.industria_mil || 0,
+              'Serviços Privados': pib?.servicos_privados_mil || 0,
+              'Adm. Pública': pib?.administracao_publica_mil || 0,
+            }]}
+            title="Composição do Valor Adicionado Bruto (R$ x1000)"
+            dataKeys={[
+              { key: 'Agropecuária', name: 'Agropecuária' },
+              { key: 'Indústria', name: 'Indústria' },
+              { key: 'Serviços Privados', name: 'Serviços Privados' },
+              { key: 'Adm. Pública', name: 'Adm. Pública' },
+            ]}
+            xAxisKey="nome"
+            height={320}
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <BarChart
+            data={[{
+              nome: 'PIB',
+              'PIB Total (x1000)': pib?.pib_total_mil || 0,
+              'VAB Total (x1000)': pib?.vab_total_mil || 0,
+              'Impostos Líquidos (x1000)': pib?.impostos_liquidos_mil || 0,
+            }]}
+            title="PIB x VAB x Impostos (R$ x1000)"
+            dataKeys={[
+              { key: 'PIB Total (x1000)', name: 'PIB Total (x1000)' },
+              { key: 'VAB Total (x1000)', name: 'VAB Total (x1000)' },
+              { key: 'Impostos Líquidos (x1000)', name: 'Impostos Líquidos (x1000)' },
+            ]}
+            xAxisKey="nome"
+            height={320}
+          />
         </Grid>
       </Grid>
 
