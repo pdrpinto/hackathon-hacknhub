@@ -1,0 +1,88 @@
+import React from 'react';
+import {
+  LineChart as RechartsLineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
+import { Paper, Typography, Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+
+interface LineChartProps {
+  data: any[];
+  title: string;
+  dataKeys: Array<{ key: string; name: string; color?: string }>;
+  xAxisKey?: string;
+  height?: number;
+}
+
+const LineChart: React.FC<LineChartProps> = ({
+  data,
+  title,
+  dataKeys,
+  xAxisKey = 'ano',
+  height = 300,
+}) => {
+  const theme = useTheme();
+
+  const defaultColors = [
+    theme.palette.primary.main,
+    theme.palette.secondary.main,
+    theme.palette.success.main,
+    theme.palette.warning.main,
+    theme.palette.error.main,
+  ];
+
+  return (
+    <Paper sx={{ p: 3, height: '100%' }}>
+      <Typography variant="h6" gutterBottom fontWeight={600}>
+        {title}
+      </Typography>
+      <Box sx={{ width: '100%', height }}>
+        <ResponsiveContainer>
+          <RechartsLineChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+            <XAxis
+              dataKey={xAxisKey}
+              tick={{ fontSize: 12 }}
+              stroke={theme.palette.text.secondary}
+            />
+            <YAxis
+              tick={{ fontSize: 12 }}
+              stroke={theme.palette.text.secondary}
+            />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: 'white',
+                border: `1px solid ${theme.palette.divider}`,
+                borderRadius: 8,
+              }}
+            />
+            <Legend />
+            {dataKeys.map((item, index) => (
+              <Line
+                key={item.key}
+                type="monotone"
+                dataKey={item.key}
+                name={item.name}
+                stroke={item.color || defaultColors[index % defaultColors.length]}
+                strokeWidth={2}
+                dot={{ r: 4 }}
+                activeDot={{ r: 6 }}
+              />
+            ))}
+          </RechartsLineChart>
+        </ResponsiveContainer>
+      </Box>
+    </Paper>
+  );
+};
+
+export default LineChart;
+
+
+

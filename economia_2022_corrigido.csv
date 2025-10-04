@@ -1,0 +1,547 @@
+ano;bairro_id;bairro;regiao;cnae_id;cnae_codigo;cnae_descricao;setor;empresas_ativas;empresas_abertas;empresas_fechadas;empregos_gerados;massa_salarial
+2022;37;Alto Alegre;Oeste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;1;0;8;25600.0
+2022;37;Alto Alegre;Oeste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;1;1;0;3;8400.0
+2022;37;Alto Alegre;Oeste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;3;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;4;4723-7/00;Comércio varejista de bebidas;Comércio;5;1;0;8;25600.0
+2022;37;Alto Alegre;Oeste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;3;1;0;3;8400.0
+2022;37;Alto Alegre;Oeste;6;5611-2/01;Restaurantes e similares;Serviços;2;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;1;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;1;0;3;8400.0
+2022;37;Alto Alegre;Oeste;10;8513-9/00;Ensino fundamental;Serviços;5;2;1;6;16800.0
+2022;37;Alto Alegre;Oeste;11;8520-1/00;Ensino médio;Serviços;3;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;6;0;2;0;0.0
+2022;37;Alto Alegre;Oeste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;37;Alto Alegre;Oeste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;1;0;3;8400.0
+2022;45;Bras??lia;Norte;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;0;0;0;0.0
+2022;45;Bras??lia;Norte;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;5;1;0;8;25600.0
+2022;45;Bras??lia;Norte;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;0;0;0;0.0
+2022;45;Bras??lia;Norte;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;5;0;0;0;0.0
+2022;45;Bras??lia;Norte;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;1;0;8;25600.0
+2022;45;Bras??lia;Norte;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;1;0;0;0;0.0
+2022;45;Bras??lia;Norte;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;3;0;0;0;0.0
+2022;45;Bras??lia;Norte;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;0;0;0;0.0
+2022;45;Bras??lia;Norte;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;1;0;0;0;0.0
+2022;45;Bras??lia;Norte;4;4723-7/00;Comércio varejista de bebidas;Comércio;2;0;0;0;0.0
+2022;45;Bras??lia;Norte;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;3;2;0;6;16800.0
+2022;45;Bras??lia;Norte;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;45;Bras??lia;Norte;8;8511-2/00;Educação infantil - creche;Serviços;0;0;0;0;0.0
+2022;45;Bras??lia;Norte;10;8513-9/00;Ensino fundamental;Serviços;3;2;0;18;65400.0
+2022;45;Bras??lia;Norte;11;8520-1/00;Ensino médio;Serviços;3;1;0;8;25600.0
+2022;45;Bras??lia;Norte;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;45;Bras??lia;Norte;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;1;0;3;8400.0
+2022;45;Bras??lia;Norte;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;3;0;0;0;0.0
+2022;42;Brazmadeira;Sul;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;0;0;0;0.0
+2022;42;Brazmadeira;Sul;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;2;0;0;0;0.0
+2022;42;Brazmadeira;Sul;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;3;1;0;3;8400.0
+2022;42;Brazmadeira;Sul;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;2;0;0;0;0.0
+2022;42;Brazmadeira;Sul;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;0;0;0;0.0
+2022;42;Brazmadeira;Sul;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;42;Brazmadeira;Sul;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;3;0;1;0;0.0
+2022;42;Brazmadeira;Sul;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;0;0;0;0.0
+2022;42;Brazmadeira;Sul;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;0;0;0;0.0
+2022;42;Brazmadeira;Sul;4;4723-7/00;Comércio varejista de bebidas;Comércio;5;1;0;3;8400.0
+2022;42;Brazmadeira;Sul;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;3;0;1;0;0.0
+2022;42;Brazmadeira;Sul;6;5611-2/01;Restaurantes e similares;Serviços;1;0;0;0;0.0
+2022;42;Brazmadeira;Sul;8;8511-2/00;Educação infantil - creche;Serviços;2;1;0;8;25600.0
+2022;42;Brazmadeira;Sul;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;1;0;3;8400.0
+2022;42;Brazmadeira;Sul;10;8513-9/00;Ensino fundamental;Serviços;2;0;0;0;0.0
+2022;42;Brazmadeira;Sul;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;42;Brazmadeira;Sul;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;3;2;0;18;65400.0
+2022;41;Canad??;Norte;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;0;0;0;0;0.0
+2022;41;Canad??;Norte;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;0;0;0;0.0
+2022;41;Canad??;Norte;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;5;0;0;0;0.0
+2022;41;Canad??;Norte;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;1;0;3;8400.0
+2022;41;Canad??;Norte;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;1;0;3;8400.0
+2022;41;Canad??;Norte;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;1;0;0;0;0.0
+2022;41;Canad??;Norte;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;41;Canad??;Norte;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;0;0;0;0.0
+2022;41;Canad??;Norte;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;1;0;3;8400.0
+2022;41;Canad??;Norte;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;3;1;1;3;8400.0
+2022;41;Canad??;Norte;6;5611-2/01;Restaurantes e similares;Serviços;3;1;0;3;8400.0
+2022;41;Canad??;Norte;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;1;0;3;8400.0
+2022;41;Canad??;Norte;8;8511-2/00;Educação infantil - creche;Serviços;0;0;0;0;0.0
+2022;41;Canad??;Norte;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;0;0;0;0.0
+2022;41;Canad??;Norte;10;8513-9/00;Ensino fundamental;Serviços;3;0;0;0;0.0
+2022;41;Canad??;Norte;11;8520-1/00;Ensino médio;Serviços;4;1;0;3;8400.0
+2022;41;Canad??;Norte;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;1;0;15;57000.0
+2022;41;Canad??;Norte;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;41;Canad??;Norte;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;4;1;0;3;8400.0
+2022;27;Cancelli;Norte;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;1;0;3;8400.0
+2022;27;Cancelli;Norte;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;1;0;0.0
+2022;27;Cancelli;Norte;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;1;0;3;8400.0
+2022;27;Cancelli;Norte;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;27;Cancelli;Norte;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;1;0;0.0
+2022;27;Cancelli;Norte;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;0;0;0;0.0
+2022;27;Cancelli;Norte;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;0;0;0;0.0
+2022;27;Cancelli;Norte;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;27;Cancelli;Norte;6;5611-2/01;Restaurantes e similares;Serviços;6;1;0;8;25600.0
+2022;27;Cancelli;Norte;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;1;1;3;8400.0
+2022;27;Cancelli;Norte;8;8511-2/00;Educação infantil - creche;Serviços;3;0;0;0;0.0
+2022;27;Cancelli;Norte;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;1;0;3;8400.0
+2022;27;Cancelli;Norte;10;8513-9/00;Ensino fundamental;Serviços;1;0;0;0;0.0
+2022;27;Cancelli;Norte;11;8520-1/00;Ensino médio;Serviços;1;0;1;0;0.0
+2022;27;Cancelli;Norte;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;27;Cancelli;Norte;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;27;Cancelli;Norte;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;1;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;6;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;4;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;4;1;0;8;25600.0
+2022;49;Cascavel Velho;Sul;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;4;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;2;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;1;1;0;3;8400.0
+2022;49;Cascavel Velho;Sul;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;6;5611-2/01;Restaurantes e similares;Serviços;3;1;0;3;8400.0
+2022;49;Cascavel Velho;Sul;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;10;8513-9/00;Ensino fundamental;Serviços;3;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;11;8520-1/00;Ensino médio;Serviços;1;0;0;0;0.0
+2022;49;Cascavel Velho;Sul;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;3;1;0;8;25600.0
+2022;49;Cascavel Velho;Sul;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;48;Cataratas;Leste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;4;0;0;0;0.0
+2022;48;Cataratas;Leste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;0;0;0;0.0
+2022;48;Cataratas;Leste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;0;0;0;0.0
+2022;48;Cataratas;Leste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;3;1;0;3;8400.0
+2022;48;Cataratas;Leste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;6;0;0;0;0.0
+2022;48;Cataratas;Leste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;3;1;1;3;8400.0
+2022;48;Cataratas;Leste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;3;1;0;8;25600.0
+2022;48;Cataratas;Leste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;0;0;0;0.0
+2022;48;Cataratas;Leste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;1;0;3;8400.0
+2022;48;Cataratas;Leste;4;4723-7/00;Comércio varejista de bebidas;Comércio;4;2;0;16;51200.0
+2022;48;Cataratas;Leste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;0;0;0;0;0.0
+2022;48;Cataratas;Leste;6;5611-2/01;Restaurantes e similares;Serviços;1;1;0;3;8400.0
+2022;48;Cataratas;Leste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;48;Cataratas;Leste;8;8511-2/00;Educação infantil - creche;Serviços;2;0;0;0;0.0
+2022;48;Cataratas;Leste;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;0;0;0;0.0
+2022;48;Cataratas;Leste;10;8513-9/00;Ensino fundamental;Serviços;1;0;0;0;0.0
+2022;48;Cataratas;Leste;11;8520-1/00;Ensino médio;Serviços;4;0;0;0;0.0
+2022;48;Cataratas;Leste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;2;1;0;3;8400.0
+2022;48;Cataratas;Leste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;48;Cataratas;Leste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;26;Centro;Centro;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;2;0;0;0;0.0
+2022;26;Centro;Centro;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;0;0;0;0.0
+2022;26;Centro;Centro;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;0;0;0;0.0
+2022;26;Centro;Centro;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;0;0;0;0.0
+2022;26;Centro;Centro;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;3;0;0;0;0.0
+2022;26;Centro;Centro;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;4;1;1;3;8400.0
+2022;26;Centro;Centro;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;1;0;3;8400.0
+2022;26;Centro;Centro;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;3;0;0;0;0.0
+2022;26;Centro;Centro;4;4723-7/00;Comércio varejista de bebidas;Comércio;2;0;0;0;0.0
+2022;26;Centro;Centro;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;1;1;3;8400.0
+2022;26;Centro;Centro;6;5611-2/01;Restaurantes e similares;Serviços;7;3;0;9;25200.0
+2022;26;Centro;Centro;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;2;0;0;0;0.0
+2022;26;Centro;Centro;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;26;Centro;Centro;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;1;0;3;8400.0
+2022;26;Centro;Centro;10;8513-9/00;Ensino fundamental;Serviços;2;0;0;0;0.0
+2022;26;Centro;Centro;11;8520-1/00;Ensino médio;Serviços;0;0;0;0;0.0
+2022;26;Centro;Centro;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;3;0;0;0;0.0
+2022;26;Centro;Centro;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;26;Centro;Centro;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;38;Coqueiral;Sul;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;1;0;0;0;0.0
+2022;38;Coqueiral;Sul;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;0;0;0;0.0
+2022;38;Coqueiral;Sul;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;0;0;0;0.0
+2022;38;Coqueiral;Sul;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;2;0;0;0;0.0
+2022;38;Coqueiral;Sul;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;0;0;0;0.0
+2022;38;Coqueiral;Sul;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;1;0;0;0;0.0
+2022;38;Coqueiral;Sul;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;38;Coqueiral;Sul;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;3;0;0;0;0.0
+2022;38;Coqueiral;Sul;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;38;Coqueiral;Sul;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;38;Coqueiral;Sul;6;5611-2/01;Restaurantes e similares;Serviços;3;0;0;0;0.0
+2022;38;Coqueiral;Sul;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;38;Coqueiral;Sul;8;8511-2/00;Educação infantil - creche;Serviços;3;1;0;3;8400.0
+2022;38;Coqueiral;Sul;11;8520-1/00;Ensino médio;Serviços;2;0;0;0;0.0
+2022;38;Coqueiral;Sul;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;3;0;0;0;0.0
+2022;38;Coqueiral;Sul;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;3;0;0;0;0.0
+2022;38;Coqueiral;Sul;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;2;0;0;0;0.0
+2022;28;Country;Oeste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;0;0;0;0.0
+2022;28;Country;Oeste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;0;0;0;0;0.0
+2022;28;Country;Oeste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;0;0;0;0.0
+2022;28;Country;Oeste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;0;0;0.0
+2022;28;Country;Oeste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;3;0;0;0;0.0
+2022;28;Country;Oeste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;3;1;0;3;8400.0
+2022;28;Country;Oeste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;1;0;0;0;0.0
+2022;28;Country;Oeste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;1;1;8;25600.0
+2022;28;Country;Oeste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;1;0;0;0;0.0
+2022;28;Country;Oeste;4;4723-7/00;Comércio varejista de bebidas;Comércio;4;1;0;3;8400.0
+2022;28;Country;Oeste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;5;0;0;0;0.0
+2022;28;Country;Oeste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;1;0;0;0;0.0
+2022;28;Country;Oeste;8;8511-2/00;Educação infantil - creche;Serviços;6;2;0;6;16800.0
+2022;28;Country;Oeste;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;0;0;0;0.0
+2022;28;Country;Oeste;10;8513-9/00;Ensino fundamental;Serviços;3;0;0;0;0.0
+2022;28;Country;Oeste;11;8520-1/00;Ensino médio;Serviços;1;1;0;3;8400.0
+2022;28;Country;Oeste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;2;0;0;0;0.0
+2022;28;Country;Oeste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;28;Country;Oeste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;2;0;1;0;0.0
+2022;55;Esmeralda;Oeste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;4;0;0;0;0.0
+2022;55;Esmeralda;Oeste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;2;0;0;0;0.0
+2022;55;Esmeralda;Oeste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;4;1;0;3;8400.0
+2022;55;Esmeralda;Oeste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;2;0;0;0;0.0
+2022;55;Esmeralda;Oeste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;0;0;0;0.0
+2022;55;Esmeralda;Oeste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;3;0;0;0;0.0
+2022;55;Esmeralda;Oeste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;5;1;0;3;8400.0
+2022;55;Esmeralda;Oeste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;4;0;0;0;0.0
+2022;55;Esmeralda;Oeste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;0;0;0;0;0.0
+2022;55;Esmeralda;Oeste;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;55;Esmeralda;Oeste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;0;0;0;0;0.0
+2022;55;Esmeralda;Oeste;6;5611-2/01;Restaurantes e similares;Serviços;0;0;0;0;0.0
+2022;55;Esmeralda;Oeste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;2;2;1;6;16800.0
+2022;55;Esmeralda;Oeste;8;8511-2/00;Educação infantil - creche;Serviços;2;0;0;0;0.0
+2022;55;Esmeralda;Oeste;9;8512-1/00;Educação infantil - pré-escola;Serviços;4;0;0;0;0.0
+2022;55;Esmeralda;Oeste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;5;1;0;15;57000.0
+2022;55;Esmeralda;Oeste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;55;Esmeralda;Oeste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;9;0;0;0;0.0
+2022;44;Floresta;Oeste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;0;1;0;0.0
+2022;44;Floresta;Oeste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;0;0;0;0.0
+2022;44;Floresta;Oeste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;0;0;0;0.0
+2022;44;Floresta;Oeste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;0;0;0;0;0.0
+2022;44;Floresta;Oeste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;0;0;0;0.0
+2022;44;Floresta;Oeste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;0;0;0;0;0.0
+2022;44;Floresta;Oeste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;44;Floresta;Oeste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;0;0;0;0.0
+2022;44;Floresta;Oeste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;0;0;0;0.0
+2022;44;Floresta;Oeste;4;4723-7/00;Comércio varejista de bebidas;Comércio;2;0;0;0;0.0
+2022;44;Floresta;Oeste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;4;1;0;8;25600.0
+2022;44;Floresta;Oeste;6;5611-2/01;Restaurantes e similares;Serviços;2;0;0;0;0.0
+2022;44;Floresta;Oeste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;1;0;3;8400.0
+2022;44;Floresta;Oeste;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;44;Floresta;Oeste;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;0;0;0;0.0
+2022;44;Floresta;Oeste;10;8513-9/00;Ensino fundamental;Serviços;3;0;0;0;0.0
+2022;44;Floresta;Oeste;11;8520-1/00;Ensino médio;Serviços;1;0;0;0;0.0
+2022;44;Floresta;Oeste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;44;Floresta;Oeste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;3;1;0;3;8400.0
+2022;44;Floresta;Oeste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;4;0;1;0;0.0
+2022;43;Interlagos;Leste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;2;0;0;0;0.0
+2022;43;Interlagos;Leste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;0;0;0;0.0
+2022;43;Interlagos;Leste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;1;0;3;8400.0
+2022;43;Interlagos;Leste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;0;0;0.0
+2022;43;Interlagos;Leste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;43;Interlagos;Leste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;1;0;3;8400.0
+2022;43;Interlagos;Leste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;0;0;0;0.0
+2022;43;Interlagos;Leste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;4;1;0;3;8400.0
+2022;43;Interlagos;Leste;4;4723-7/00;Comércio varejista de bebidas;Comércio;3;1;0;3;8400.0
+2022;43;Interlagos;Leste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;43;Interlagos;Leste;6;5611-2/01;Restaurantes e similares;Serviços;1;0;0;0;0.0
+2022;43;Interlagos;Leste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;1;0;8;25600.0
+2022;43;Interlagos;Leste;8;8511-2/00;Educação infantil - creche;Serviços;3;1;0;3;8400.0
+2022;43;Interlagos;Leste;9;8512-1/00;Educação infantil - pré-escola;Serviços;0;0;0;0;0.0
+2022;43;Interlagos;Leste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;5;2;0;11;34000.0
+2022;43;Interlagos;Leste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;43;Interlagos;Leste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;32;Maria Luiza;Sul;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;0;0;0;0.0
+2022;32;Maria Luiza;Sul;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;1;0;3;8400.0
+2022;32;Maria Luiza;Sul;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;1;0;8;25600.0
+2022;32;Maria Luiza;Sul;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;2;0;0;0;0.0
+2022;32;Maria Luiza;Sul;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;1;1;0;8;25600.0
+2022;32;Maria Luiza;Sul;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;0;0;0;0.0
+2022;32;Maria Luiza;Sul;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;1;0;0;0;0.0
+2022;32;Maria Luiza;Sul;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;32;Maria Luiza;Sul;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;32;Maria Luiza;Sul;6;5611-2/01;Restaurantes e similares;Serviços;1;0;0;0;0.0
+2022;32;Maria Luiza;Sul;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;1;0;0;0;0.0
+2022;32;Maria Luiza;Sul;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;0;0;0;0.0
+2022;32;Maria Luiza;Sul;10;8513-9/00;Ensino fundamental;Serviços;2;0;1;0;0.0
+2022;32;Maria Luiza;Sul;11;8520-1/00;Ensino médio;Serviços;4;0;0;0;0.0
+2022;32;Maria Luiza;Sul;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;3;0;0;0;0.0
+2022;32;Maria Luiza;Sul;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;32;Maria Luiza;Sul;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;5;0;0;0;0.0
+2022;47;Morumbi;Oeste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;2;0;0;0;0.0
+2022;47;Morumbi;Oeste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;0;0;0;0.0
+2022;47;Morumbi;Oeste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;0;0;0;0;0.0
+2022;47;Morumbi;Oeste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;0;0;0.0
+2022;47;Morumbi;Oeste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;1;0;3;8400.0
+2022;47;Morumbi;Oeste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;3;0;0;0;0.0
+2022;47;Morumbi;Oeste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;0;0;0;0.0
+2022;47;Morumbi;Oeste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;1;0;0;0;0.0
+2022;47;Morumbi;Oeste;4;4723-7/00;Comércio varejista de bebidas;Comércio;2;0;0;0;0.0
+2022;47;Morumbi;Oeste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;2;1;0;3;8400.0
+2022;47;Morumbi;Oeste;6;5611-2/01;Restaurantes e similares;Serviços;1;0;0;0;0.0
+2022;47;Morumbi;Oeste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;4;0;0;0;0.0
+2022;47;Morumbi;Oeste;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;47;Morumbi;Oeste;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;0;0;0;0.0
+2022;47;Morumbi;Oeste;10;8513-9/00;Ensino fundamental;Serviços;3;1;0;8;25600.0
+2022;47;Morumbi;Oeste;11;8520-1/00;Ensino médio;Serviços;3;0;0;0;0.0
+2022;47;Morumbi;Oeste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;47;Morumbi;Oeste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;4;0;0;0;0.0
+2022;47;Morumbi;Oeste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;34;Neva;Leste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;0;0;0;0;0.0
+2022;34;Neva;Leste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;0;0;0;0.0
+2022;34;Neva;Leste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;2;1;0;8;25600.0
+2022;34;Neva;Leste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;4;3;0;9;25200.0
+2022;34;Neva;Leste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;1;0;8;25600.0
+2022;34;Neva;Leste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;6;1;0;3;8400.0
+2022;34;Neva;Leste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;0;0;0;0.0
+2022;34;Neva;Leste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;4;1;1;8;25600.0
+2022;34;Neva;Leste;4;4723-7/00;Comércio varejista de bebidas;Comércio;2;1;0;3;8400.0
+2022;34;Neva;Leste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;34;Neva;Leste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;1;0;0;0;0.0
+2022;34;Neva;Leste;8;8511-2/00;Educação infantil - creche;Serviços;4;0;0;0;0.0
+2022;34;Neva;Leste;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;0;0;0;0.0
+2022;34;Neva;Leste;10;8513-9/00;Ensino fundamental;Serviços;1;1;0;3;8400.0
+2022;34;Neva;Leste;11;8520-1/00;Ensino médio;Serviços;3;0;0;0;0.0
+2022;34;Neva;Leste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;34;Neva;Leste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;1;0;8;25600.0
+2022;34;Neva;Leste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;3;0;0;0;0.0
+2022;30;Pacaembu;Norte;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;1;0;0;0;0.0
+2022;30;Pacaembu;Norte;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;1;0;3;8400.0
+2022;30;Pacaembu;Norte;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;0;0;0;0.0
+2022;30;Pacaembu;Norte;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;4;1;0;3;8400.0
+2022;30;Pacaembu;Norte;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;0;0;0;0.0
+2022;30;Pacaembu;Norte;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;1;0;3;8400.0
+2022;30;Pacaembu;Norte;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;1;0;0;0;0.0
+2022;30;Pacaembu;Norte;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;4;0;0;0;0.0
+2022;30;Pacaembu;Norte;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;1;0;8;25600.0
+2022;30;Pacaembu;Norte;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;30;Pacaembu;Norte;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;0;0;0;0;0.0
+2022;30;Pacaembu;Norte;6;5611-2/01;Restaurantes e similares;Serviços;3;0;0;0;0.0
+2022;30;Pacaembu;Norte;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;4;0;0;0;0.0
+2022;30;Pacaembu;Norte;8;8511-2/00;Educação infantil - creche;Serviços;0;0;0;0;0.0
+2022;30;Pacaembu;Norte;9;8512-1/00;Educação infantil - pré-escola;Serviços;3;0;0;0;0.0
+2022;30;Pacaembu;Norte;10;8513-9/00;Ensino fundamental;Serviços;1;0;0;0;0.0
+2022;30;Pacaembu;Norte;11;8520-1/00;Ensino médio;Serviços;3;0;0;0;0.0
+2022;30;Pacaembu;Norte;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;2;0;0;0;0.0
+2022;30;Pacaembu;Norte;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;30;Pacaembu;Norte;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;5;1;1;3;8400.0
+2022;33;Parque S??o Paulo;Norte;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;1;1;0;3;8400.0
+2022;33;Parque S??o Paulo;Norte;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;2;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;0;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;3;1;0;15;57000.0
+2022;33;Parque S??o Paulo;Norte;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;3;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;1;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;4;2;0;6;16800.0
+2022;33;Parque S??o Paulo;Norte;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;1;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;1;0;3;8400.0
+2022;33;Parque S??o Paulo;Norte;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;2;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;0;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;8;8511-2/00;Educação infantil - creche;Serviços;2;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;10;8513-9/00;Ensino fundamental;Serviços;2;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;11;8520-1/00;Ensino médio;Serviços;1;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;33;Parque S??o Paulo;Norte;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;2;0;0;0;0.0
+2022;39;Parque Verde;Leste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;2;1;0;3;8400.0
+2022;39;Parque Verde;Leste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;0;0;0;0.0
+2022;39;Parque Verde;Leste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;2;0;18;65400.0
+2022;39;Parque Verde;Leste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;2;0;0;0;0.0
+2022;39;Parque Verde;Leste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;3;1;0;3;8400.0
+2022;39;Parque Verde;Leste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;1;0;8;25600.0
+2022;39;Parque Verde;Leste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;1;1;0;8;25600.0
+2022;39;Parque Verde;Leste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;2;0;0;0;0.0
+2022;39;Parque Verde;Leste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;0;0;0;0.0
+2022;39;Parque Verde;Leste;4;4723-7/00;Comércio varejista de bebidas;Comércio;2;1;0;8;25600.0
+2022;39;Parque Verde;Leste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;2;0;0;0;0.0
+2022;39;Parque Verde;Leste;6;5611-2/01;Restaurantes e similares;Serviços;2;0;0;0;0.0
+2022;39;Parque Verde;Leste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;39;Parque Verde;Leste;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;39;Parque Verde;Leste;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;1;0;8;25600.0
+2022;39;Parque Verde;Leste;10;8513-9/00;Ensino fundamental;Serviços;4;0;0;0;0.0
+2022;39;Parque Verde;Leste;11;8520-1/00;Ensino médio;Serviços;4;0;0;0;0.0
+2022;39;Parque Verde;Leste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;39;Parque Verde;Leste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;1;0;3;8400.0
+2022;46;Periolo;Sul;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;1;0;3;8400.0
+2022;46;Periolo;Sul;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;2;0;0;0;0.0
+2022;46;Periolo;Sul;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;4;0;0;0;0.0
+2022;46;Periolo;Sul;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;4;1;0;3;8400.0
+2022;46;Periolo;Sul;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;0;0;0;0.0
+2022;46;Periolo;Sul;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;4;1;0;3;8400.0
+2022;46;Periolo;Sul;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;3;2;0;6;16800.0
+2022;46;Periolo;Sul;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;4;0;0;0;0.0
+2022;46;Periolo;Sul;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;4;0;0;0;0.0
+2022;46;Periolo;Sul;4;4723-7/00;Comércio varejista de bebidas;Comércio;3;0;0;0;0.0
+2022;46;Periolo;Sul;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;2;0;1;0;0.0
+2022;46;Periolo;Sul;6;5611-2/01;Restaurantes e similares;Serviços;2;1;0;3;8400.0
+2022;46;Periolo;Sul;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;46;Periolo;Sul;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;46;Periolo;Sul;9;8512-1/00;Educação infantil - pré-escola;Serviços;0;0;0;0;0.0
+2022;46;Periolo;Sul;10;8513-9/00;Ensino fundamental;Serviços;1;0;0;0;0.0
+2022;46;Periolo;Sul;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;2;0;0;0;0.0
+2022;46;Periolo;Sul;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;46;Periolo;Sul;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;4;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;1;1;0;3;8400.0
+2022;35;Pioneiros Catarinenses;Sul;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;3;1;0;8;25600.0
+2022;35;Pioneiros Catarinenses;Sul;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;1;1;8;25600.0
+2022;35;Pioneiros Catarinenses;Sul;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;0;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;4;4723-7/00;Comércio varejista de bebidas;Comércio;2;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;6;5611-2/01;Restaurantes e similares;Serviços;1;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;1;0;8;25600.0
+2022;35;Pioneiros Catarinenses;Sul;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;10;8513-9/00;Ensino fundamental;Serviços;1;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;11;8520-1/00;Ensino médio;Serviços;1;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;35;Pioneiros Catarinenses;Sul;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;4;1;0;3;8400.0
+2022;40;Recanto Tropical;Oeste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;1;0;3;8400.0
+2022;40;Recanto Tropical;Oeste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;4;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;3;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;3;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;6;3;0;9;25200.0
+2022;40;Recanto Tropical;Oeste;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;8;8511-2/00;Educação infantil - creche;Serviços;3;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;9;8512-1/00;Educação infantil - pré-escola;Serviços;4;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;10;8513-9/00;Ensino fundamental;Serviços;3;1;0;3;8400.0
+2022;40;Recanto Tropical;Oeste;11;8520-1/00;Ensino médio;Serviços;1;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;2;0;0;0;0.0
+2022;40;Recanto Tropical;Oeste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;1;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;0;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;3;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;1;0;3;8400.0
+2022;31;Regi??o do Lago;Oeste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;0;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;0;1;0;0.0
+2022;31;Regi??o do Lago;Oeste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;3;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;6;5611-2/01;Restaurantes e similares;Serviços;2;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;4;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;8;8511-2/00;Educação infantil - creche;Serviços;3;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;10;8513-9/00;Ensino fundamental;Serviços;1;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;11;8520-1/00;Ensino médio;Serviços;4;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;3;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;31;Regi??o do Lago;Oeste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;2;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;2;1;0;15;57000.0
+2022;29;S??o Crist??v??o;Leste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;1;0;3;8400.0
+2022;29;S??o Crist??v??o;Leste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;3;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;2;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;3;1;0;8;25600.0
+2022;29;S??o Crist??v??o;Leste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;6;5611-2/01;Restaurantes e similares;Serviços;3;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;8;8511-2/00;Educação infantil - creche;Serviços;3;1;0;8;25600.0
+2022;29;S??o Crist??v??o;Leste;9;8512-1/00;Educação infantil - pré-escola;Serviços;2;1;0;3;8400.0
+2022;29;S??o Crist??v??o;Leste;11;8520-1/00;Ensino médio;Serviços;3;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;4;0;1;0;0.0
+2022;29;S??o Crist??v??o;Leste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;0;0;0;0.0
+2022;29;S??o Crist??v??o;Leste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;4;1;0;3;8400.0
+2022;54;Santa Cruz;Leste;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;6;0;0;0;0.0
+2022;54;Santa Cruz;Leste;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;2;0;0;0;0.0
+2022;54;Santa Cruz;Leste;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;0;0;0.0
+2022;54;Santa Cruz;Leste;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;3;0;0;0;0.0
+2022;54;Santa Cruz;Leste;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;1;0;0;0;0.0
+2022;54;Santa Cruz;Leste;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;54;Santa Cruz;Leste;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;1;0;0;0;0.0
+2022;54;Santa Cruz;Leste;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;1;0;0;0;0.0
+2022;54;Santa Cruz;Leste;4;4723-7/00;Comércio varejista de bebidas;Comércio;0;0;0;0;0.0
+2022;54;Santa Cruz;Leste;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;2;1;0;3;8400.0
+2022;54;Santa Cruz;Leste;6;5611-2/01;Restaurantes e similares;Serviços;5;0;1;0;0.0
+2022;54;Santa Cruz;Leste;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;3;0;9;25200.0
+2022;54;Santa Cruz;Leste;8;8511-2/00;Educação infantil - creche;Serviços;2;0;0;0;0.0
+2022;54;Santa Cruz;Leste;9;8512-1/00;Educação infantil - pré-escola;Serviços;0;0;0;0;0.0
+2022;54;Santa Cruz;Leste;10;8513-9/00;Ensino fundamental;Serviços;1;0;0;0;0.0
+2022;54;Santa Cruz;Leste;11;8520-1/00;Ensino médio;Serviços;4;0;0;0;0.0
+2022;54;Santa Cruz;Leste;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;6;1;0;8;25600.0
+2022;54;Santa Cruz;Leste;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;4;0;0;0;0.0
+2022;54;Santa Cruz;Leste;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;2;1;0;3;8400.0
+2022;50;Santa Felicidade;Norte;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;6;1;0;3;8400.0
+2022;50;Santa Felicidade;Norte;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;1;0;3;8400.0
+2022;50;Santa Felicidade;Norte;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;0;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;0;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;5;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;4;4723-7/00;Comércio varejista de bebidas;Comércio;5;0;1;0;0.0
+2022;50;Santa Felicidade;Norte;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;2;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;6;5611-2/01;Restaurantes e similares;Serviços;1;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;3;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;9;8512-1/00;Educação infantil - pré-escola;Serviços;0;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;10;8513-9/00;Ensino fundamental;Serviços;3;0;0;0;0.0
+2022;50;Santa Felicidade;Norte;11;8520-1/00;Ensino médio;Serviços;5;1;0;3;8400.0
+2022;50;Santa Felicidade;Norte;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;1;0;3;8400.0
+2022;50;Santa Felicidade;Norte;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;0;0;0;0.0
+2022;36;Santo Onofre;Norte;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;4;0;0;0;0.0
+2022;36;Santo Onofre;Norte;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;2;1;0;3;8400.0
+2022;36;Santo Onofre;Norte;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;3;1;0;3;8400.0
+2022;36;Santo Onofre;Norte;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;1;0;0;0;0.0
+2022;36;Santo Onofre;Norte;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;2;0;0;0;0.0
+2022;36;Santo Onofre;Norte;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;1;0;0;0;0.0
+2022;36;Santo Onofre;Norte;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;36;Santo Onofre;Norte;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;0;0;0;0;0.0
+2022;36;Santo Onofre;Norte;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;3;0;0;0;0.0
+2022;36;Santo Onofre;Norte;4;4723-7/00;Comércio varejista de bebidas;Comércio;4;1;0;8;25600.0
+2022;36;Santo Onofre;Norte;6;5611-2/01;Restaurantes e similares;Serviços;2;0;0;0;0.0
+2022;36;Santo Onofre;Norte;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;2;2;1;6;16800.0
+2022;36;Santo Onofre;Norte;8;8511-2/00;Educação infantil - creche;Serviços;3;1;0;3;8400.0
+2022;36;Santo Onofre;Norte;9;8512-1/00;Educação infantil - pré-escola;Serviços;3;0;0;0;0.0
+2022;36;Santo Onofre;Norte;10;8513-9/00;Ensino fundamental;Serviços;3;1;0;3;8400.0
+2022;36;Santo Onofre;Norte;11;8520-1/00;Ensino médio;Serviços;5;2;0;11;34000.0
+2022;36;Santo Onofre;Norte;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;2;0;0;0;0.0
+2022;36;Santo Onofre;Norte;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;3;0;0;0;0.0
+2022;36;Santo Onofre;Norte;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;1;1;0;8;25600.0
+2022;53;Santos Dumont;Centro;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;2;0;0;0;0.0
+2022;53;Santos Dumont;Centro;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;1;0;0;0;0.0
+2022;53;Santos Dumont;Centro;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;3;0;0;0;0.0
+2022;53;Santos Dumont;Centro;19;29.42-2/00;Fabricação de caminhões e ônibus;Indústria;1;0;0;0;0.0
+2022;53;Santos Dumont;Centro;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;53;Santos Dumont;Centro;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;4;0;0;0;0.0
+2022;53;Santos Dumont;Centro;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;6;1;0;8;25600.0
+2022;53;Santos Dumont;Centro;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;5;0;0;0;0.0
+2022;53;Santos Dumont;Centro;4;4723-7/00;Comércio varejista de bebidas;Comércio;1;0;0;0;0.0
+2022;53;Santos Dumont;Centro;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;3;0;0;0;0.0
+2022;53;Santos Dumont;Centro;6;5611-2/01;Restaurantes e similares;Serviços;3;0;2;0;0.0
+2022;53;Santos Dumont;Centro;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;2;0;0;0;0.0
+2022;53;Santos Dumont;Centro;8;8511-2/00;Educação infantil - creche;Serviços;1;0;0;0;0.0
+2022;53;Santos Dumont;Centro;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;0;0;0;0.0
+2022;53;Santos Dumont;Centro;10;8513-9/00;Ensino fundamental;Serviços;1;1;0;3;8400.0
+2022;53;Santos Dumont;Centro;11;8520-1/00;Ensino médio;Serviços;2;1;0;3;8400.0
+2022;53;Santos Dumont;Centro;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;1;0;0;0;0.0
+2022;53;Santos Dumont;Centro;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;3;0;0;0;0.0
+2022;53;Santos Dumont;Centro;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;2;1;0;3;8400.0
+2022;51;Universit??rio;Centro;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;3;1;0;3;8400.0
+2022;51;Universit??rio;Centro;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;3;0;0;0;0.0
+2022;51;Universit??rio;Centro;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;0;0;0;0;0.0
+2022;51;Universit??rio;Centro;20;47.11-3/02;Minimercados, mercearias e armazéns;Comércio;2;0;0;0;0.0
+2022;51;Universit??rio;Centro;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;1;0;0;0;0.0
+2022;51;Universit??rio;Centro;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;3;1;0;3;8400.0
+2022;51;Universit??rio;Centro;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;0;0;0;0.0
+2022;51;Universit??rio;Centro;4;4723-7/00;Comércio varejista de bebidas;Comércio;3;1;0;8;25600.0
+2022;51;Universit??rio;Centro;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;51;Universit??rio;Centro;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;1;0;0;0;0.0
+2022;51;Universit??rio;Centro;8;8511-2/00;Educação infantil - creche;Serviços;2;0;0;0;0.0
+2022;51;Universit??rio;Centro;9;8512-1/00;Educação infantil - pré-escola;Serviços;1;0;0;0;0.0
+2022;51;Universit??rio;Centro;10;8513-9/00;Ensino fundamental;Serviços;5;1;0;3;8400.0
+2022;51;Universit??rio;Centro;11;8520-1/00;Ensino médio;Serviços;4;1;0;3;8400.0
+2022;51;Universit??rio;Centro;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;2;0;0;0;0.0
+2022;51;Universit??rio;Centro;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;2;1;0;8;25600.0
+2022;51;Universit??rio;Centro;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;5;1;0;15;57000.0
+2022;52;XIV De Novembro;Centro;15;10.91-1/01;Fabricação de produtos de panificação industrial;Indústria;1;1;0;3;8400.0
+2022;52;XIV De Novembro;Centro;16;10.92-9/01;Fabricação de biscoitos e bolachas;Indústria;2;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;17;25.11-0/00;Fabricação de estruturas metálicas;Indústria;4;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;18;28.13-9/00;Fabricação de válvulas, registros e dispositivos;Indústria;3;2;0;18;65400.0
+2022;52;XIV De Novembro;Centro;1;4711-3/01;Comércio varejista de mercadorias em geral;Comércio;2;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;2;4712-1/00;Comércio varejista de mercadorias em lojas de conveniência;Comércio;0;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;3;4721-1/02;Padaria e confeitaria com predominância de revenda;Comércio;2;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;4;4723-7/00;Comércio varejista de bebidas;Comércio;4;1;0;8;25600.0
+2022;52;XIV De Novembro;Centro;5;4744-0/05;Comércio varejista de medicamentos e artigos de perfumaria;Comércio;1;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;6;5611-2/01;Restaurantes e similares;Serviços;0;1;0;3;8400.0
+2022;52;XIV De Novembro;Centro;7;5620-1/01;Fornecimento de alimentos preparados;Serviços;2;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;8;8511-2/00;Educação infantil - creche;Serviços;3;1;0;3;8400.0
+2022;52;XIV De Novembro;Centro;10;8513-9/00;Ensino fundamental;Serviços;2;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;11;8520-1/00;Ensino médio;Serviços;2;1;0;15;57000.0
+2022;52;XIV De Novembro;Centro;12;8610-1/01;Atividades de atendimento hospitalar;Saúde;5;1;0;3;8400.0
+2022;52;XIV De Novembro;Centro;13;8630-5/01;Atividade médica ambulatorial restrita a consultas;Saúde;1;0;0;0;0.0
+2022;52;XIV De Novembro;Centro;14;8640-2/01;Laboratórios de anatomia patológica e citológica;Saúde;3;0;0;0;0.0

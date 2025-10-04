@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgis/postgis:15-3.3-alpine
+    container_name: cascavel_db
+    environment:
+      POSTGRES_DB: cascavel_db
+      POSTGRES_USER: cascavel_user
+      POSTGRES_PASSWORD: cascavel_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init_v2.sql:/docker-entrypoint-initdb.d/01-init.sql
+      - ./database/seeds_v2.sql:/docker-entrypoint-initdb.d/02-seeds.sql
+    networks:
+      - cascavel_network
+
+  backend:
+    build: ./backend
+    container_name: cascavel_backend
+    environment:
+      DATABASE_URL: postgresql://cascavel_user:cascavel_pass@db:5432/cascavel_db
+      FLASK_ENV: development
+      FLASK_APP: app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - db
+    networks:
+      - cascavel_network
+    command: python app.py
+
+  frontend:
+    build: ./frontend
+    container_name: cascavel_frontend
+    environment:
+      REACT_APP_API_URL: http://localhost:5000
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - cascavel_network
+    stdin_open: true
+    tty: true
+
+volumes:
+  postgres_data:
+
+networks:
+  cascavel_network:
+    driver: bridge
+
+
