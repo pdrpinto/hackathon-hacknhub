@@ -1,0 +1,43 @@
+/* Styles to align Alertas page with Dashboard look-and-feel */
+.page-header { margin-bottom: 16px; }
+.page-header h2 { margin: 0; font-size: 20px; color: var(--text-strong); }
+.page-header .muted { margin-top: 4px; color: var(--text-muted); font-size: 13px; }
+
+.summary-grid { grid-template-columns: repeat(5, minmax(120px, 1fr)); gap: 16px; }
+.summary-grid .card.kpi { display: flex; flex-direction: column; gap: 6px; }
+.summary-grid .card.kpi .label { color: var(--text-muted); font-size: 12px; }
+.summary-grid .card.kpi .value { font-size: 24px; font-weight: 700; }
+.summary-grid .card.kpi.red { background: rgba(255, 0, 0, 0.06); }
+.summary-grid .card.kpi.yellow { background: rgba(248, 213, 72, 0.08); }
+.summary-grid .card.kpi.blue { background: rgba(46, 161, 255, 0.08); }
+.summary-grid .card.kpi.green { background: rgba(124, 222, 118, 0.08); }
+.summary-grid .card.kpi.orange { background: rgba(255, 165, 0, 0.08); }
+
+.filters-row { display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)); gap: 16px; align-items: end; }
+.filters-actions { display: flex; justify-content: flex-end; }
+
+.loading, .error, .empty { padding: 24px; color: var(--text-muted); }
+
+.alerta-list { display: grid; gap: 16px; }
+
+/* Modal */
+.modal-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(5, 20, 35, 0.55);
+	backdrop-filter: blur(3px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+.modal {
+	width: min(880px, 92vw);
+	background: var(--glass-panel);
+	border: 1px solid var(--glass-border);
+	box-shadow: var(--shadow-lg);
+	border-radius: 16px;
+	padding: 16px;
+}
+.modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.modal-content { max-height: 70vh; overflow: auto; }

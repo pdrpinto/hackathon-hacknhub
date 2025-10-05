@@ -1,0 +1,96 @@
+/* Design Tokens - TraceGov Glassmorphism Theme */
+
+:root {
+  /* Cores principais */
+  --color-blue-deep: #0a2541;
+  --color-blue-darker: #081d35;
+  --color-blue-primary: #2EA1FF;
+  --color-green-accent: #7CDE76;
+  --color-yellow-accent: #F8D548;
+  --color-text-light: #E6EEF6;
+  --color-text-dark: #0B2239;
+  
+  /* Cinzas translúcidos */
+  --color-border-light: rgba(10, 42, 65, 0.08);
+  --color-border-medium: rgba(10, 42, 65, 0.15);
+  --color-border-dark: rgba(10, 42, 65, 0.25);
+  --color-bg-glass: rgba(255, 255, 255, 0.85);
+  --color-bg-glass-dark: rgba(10, 42, 65, 0.95);
+  
+  /* Raios */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 26px;
+  
+  /* Sombras */
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.16);
+  
+  /* Tipografia */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Transições */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Espaçamentos */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+}
+
+/* Animações globais */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Utilitários globais */
+.glass-effect {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, var(--color-blue-primary), var(--color-green-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

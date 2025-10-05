@@ -140,6 +140,13 @@ export const economiaAPI = {
     api.get('/economia/pib', { params }),
 };
 
+// ===== Bairros =====
+export const bairrosAPI = {
+  getAll: () => api.get('/bairros'),
+  getByRegiao: (regiao: string) => api.get(`/bairros/regiao/${regiao}`),
+  getById: (id: number) => api.get(`/bairros/${id}`),
+};
+
 // ===== ECONOMIA MOCK (CAGED) =====
 // Removido: API mock isolada (reversão solicitada)
 

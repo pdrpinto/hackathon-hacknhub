@@ -1,10 +1,15 @@
 /**
- * Dashboard de Alertas com Análise de Impactos Cruzados
+ * Dashboard de Alertas com Análise de Impactos Cruzados (usa o mesmo layout do Dashboard)
  */
 import React, { useState, useEffect } from 'react';
 import { anomaliasAPI } from '../../services/api';
 import { Alerta, AlertasResponse, CategoriasResponse } from '../../types/alertas';
 import AlertaCard from '../../components/common/AlertaCard';
+import Sidebar from '../../components/layout/Sidebar';
+import Topbar from '../../components/layout/Topbar';
+import AuthEllipses from '../../components/common/AuthEllipses';
+import '../Dashboard/Dashboard.css';
+import './Alertas.css';
 
 const DashboardAlertas: React.FC = () => {
   const [alertas, setAlertas] = useState<Alerta[]>([]);
@@ -14,6 +19,9 @@ const DashboardAlertas: React.FC = () => {
   const [resumo, setResumo] = useState<AlertasResponse['resumo'] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [detalheAberto, setDetalheAberto] = useState<Alerta | null>(null);
+  const [detalheLoading, setDetalheLoading] = useState(false);
+  const [detalheErro, setDetalheErro] = useState<string | null>(null);
 
   // Carregar categorias disponíveis
   useEffect(() => {
@@ -59,135 +67,162 @@ const DashboardAlertas: React.FC = () => {
     setFiltroSeveridade('');
   };
 
+  const abrirDetalhe = async (alerta: Alerta) => {
+    try {
+      setDetalheErro(null);
+      setDetalheLoading(true);
+      // Buscar detalhes adicionais, se o backend fornecer
+      const res = await anomaliasAPI.getAlertaDetalhes(alerta.id);
+      const dados = res.data as Alerta; // fallback para o mesmo shape
+      setDetalheAberto({ ...alerta, ...dados });
+    } catch (e) {
+      // Se o endpoint não estiver pronto, ainda abrimos com os dados básicos
+      setDetalheAberto(alerta);
+      setDetalheErro('Não foi possível carregar detalhes adicionais.');
+    } finally {
+      setDetalheLoading(false);
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Alertas com Análise de Impactos
-          </h1>
-          <p className="text-gray-600">
-            Anomalias detectadas nos dados municipais com validação cruzada de impactos em outras métricas
-          </p>
-        </div>
-
-        {/* Resumo */}
-        {resumo && (
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
-            <div className="bg-red-100 rounded-lg p-4 border-l-4 border-red-600">
-              <p className="text-sm text-gray-600 font-semibold">Críticos</p>
-              <p className="text-3xl font-bold text-red-900">{resumo.criticos}</p>
-            </div>
-            <div className="bg-yellow-100 rounded-lg p-4 border-l-4 border-yellow-600">
-              <p className="text-sm text-gray-600 font-semibold">Atenção</p>
-              <p className="text-3xl font-bold text-yellow-900">{resumo.atencao}</p>
-            </div>
-            <div className="bg-blue-100 rounded-lg p-4 border-l-4 border-blue-600">
-              <p className="text-sm text-gray-600 font-semibold">Informativos</p>
-              <p className="text-3xl font-bold text-blue-900">{resumo.informativos}</p>
-            </div>
-            <div className="bg-green-100 rounded-lg p-4 border-l-4 border-green-600">
-              <p className="text-sm text-gray-600 font-semibold">Positivas</p>
-              <p className="text-3xl font-bold text-green-900">{resumo.anomalias_positivas}</p>
-            </div>
-            <div className="bg-orange-100 rounded-lg p-4 border-l-4 border-orange-600">
-              <p className="text-sm text-gray-600 font-semibold">Negativas</p>
-              <p className="text-3xl font-bold text-orange-900">{resumo.anomalias_negativas}</p>
-            </div>
+    <div className="dashboard-layout">
+      <AuthEllipses />
+      <Sidebar />
+      <div className="content">
+        <Topbar />
+        <main className="dashboard-main">
+          <div className="page-header">
+            <h2>Alertas com Análise de Impactos</h2>
+            <p className="muted">Anomalias detectadas nos dados e impactos esperados em outras métricas</p>
           </div>
-        )}
 
-        {/* Filtros */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">Filtros</h2>
-            <button
-              onClick={limparFiltros}
-              className="text-sm text-blue-600 hover:text-blue-800 font-medium"
-            >
-              Limpar Filtros
-            </button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Filtro Categoria */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Categoria
-              </label>
-              <select
-                value={filtroCategoria}
-                onChange={(e) => setFiltroCategoria(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="">Todas as categorias</option>
-                {categorias?.categorias.map((cat) => (
-                  <option key={cat.id} value={cat.id}>
-                    {cat.nome}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Filtro Severidade */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Severidade
-              </label>
-              <select
-                value={filtroSeveridade}
-                onChange={(e) => setFiltroSeveridade(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="">Todas as severidades</option>
-                {categorias?.severidades.map((sev) => (
-                  <option key={sev.id} value={sev.id}>
-                    {sev.nome}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* Loading */}
-        {loading && (
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-          </div>
-        )}
-
-        {/* Error */}
-        {error && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
-            {error}
-          </div>
-        )}
-
-        {/* Lista de Alertas */}
-        {!loading && !error && (
-          <div>
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-semibold text-gray-900">
-                {alertas.length} {alertas.length === 1 ? 'Alerta' : 'Alertas'} encontrado{alertas.length === 1 ? '' : 's'}
-              </h2>
-            </div>
-
-            {alertas.length === 0 ? (
-              <div className="bg-white rounded-lg shadow-md p-12 text-center">
-                <p className="text-gray-500 text-lg">
-                  Nenhum alerta encontrado com os filtros selecionados.
-                </p>
+          {resumo && (
+            <div className="grid summary-grid">
+              <div className="card kpi red">
+                <div className="label">Críticos</div>
+                <div className="value">{resumo.criticos}</div>
               </div>
-            ) : (
+              <div className="card kpi yellow">
+                <div className="label">Atenção</div>
+                <div className="value">{resumo.atencao}</div>
+              </div>
+              <div className="card kpi blue">
+                <div className="label">Informativos</div>
+                <div className="value">{resumo.informativos}</div>
+              </div>
+              <div className="card kpi green">
+                <div className="label">Positivas</div>
+                <div className="value">{resumo.anomalias_positivas}</div>
+              </div>
+              <div className="card kpi orange">
+                <div className="label">Negativas</div>
+                <div className="value">{resumo.anomalias_negativas}</div>
+              </div>
+            </div>
+          )}
+
+          <div className="card" style={{ marginBottom: 24 }}>
+            <div className="filters-row">
               <div>
-                {alertas.map((alerta) => (
-                  <AlertaCard key={alerta.id} alerta={alerta} />
-                ))}
+                <label className="label">Categoria</label>
+                <select className="input" value={filtroCategoria} onChange={(e) => setFiltroCategoria(e.target.value)}>
+                  <option value="">Todas</option>
+                  {categorias?.categorias.map((cat) => (
+                    <option key={cat.id} value={cat.id}>{cat.nome}</option>
+                  ))}
+                </select>
               </div>
-            )}
+              <div>
+                <label className="label">Severidade</label>
+                <select className="input" value={filtroSeveridade} onChange={(e) => setFiltroSeveridade(e.target.value)}>
+                  <option value="">Todas</option>
+                  {categorias?.severidades.map((sev) => (
+                    <option key={sev.id} value={sev.id}>{sev.nome}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="filters-actions">
+                <button className="btn" onClick={limparFiltros}>Limpar filtros</button>
+              </div>
+            </div>
           </div>
-        )}
+
+          {loading && <div className="loading">Carregando alertas…</div>}
+          {error && <div className="error">{error}</div>}
+
+          {!loading && !error && (
+            <div className="card">
+              <div className="list-header">
+                <h3>{alertas.length} {alertas.length === 1 ? 'Alerta' : 'Alertas'}</h3>
+              </div>
+              <div className="alerta-list">
+                {alertas.length === 0 ? (
+                  <div className="empty">Nenhum alerta encontrado com os filtros selecionados.</div>
+                ) : (
+                  alertas.map((a) => (
+                    <div key={a.id} className="alerta-item" onClick={() => abrirDetalhe(a)} style={{ cursor: 'pointer' }}>
+                      {/* Reutiliza o componente existente */}
+                      <AlertaCard alerta={a} />
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Modal de Detalhes */}
+          {detalheAberto && (
+            <div className="modal-backdrop" onClick={() => setDetalheAberto(null)}>
+              <div className="modal" onClick={(e) => e.stopPropagation()}>
+                <div className="modal-header">
+                  <h3>Detalhes do Alerta</h3>
+                  <button className="icon-btn" onClick={() => setDetalheAberto(null)}>✕</button>
+                </div>
+                {detalheLoading ? (
+                  <div className="loading">Carregando…</div>
+                ) : (
+                  <div className="modal-content">
+                    <div className="grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+                      <div className="card">
+                        <div className="label">Título</div>
+                        <div className="value">{detalheAberto.titulo}</div>
+                      </div>
+                      <div className="card">
+                        <div className="label">Categoria</div>
+                        <div className="value">{detalheAberto.categoria}</div>
+                      </div>
+                      <div className="card">
+                        <div className="label">Severidade</div>
+                        <div className="value">{detalheAberto.severidade}</div>
+                      </div>
+                    </div>
+
+                    <div className="card" style={{ marginTop: 16 }}>
+                      <div className="label">Descrição</div>
+                      <div className="value" style={{ whiteSpace: 'pre-wrap' }}>{detalheAberto.descricao}</div>
+                    </div>
+
+                    <div className="card" style={{ marginTop: 16 }}>
+                      <div className="label">Impactos Esperados</div>
+                      <div className="alerta-list" style={{ marginTop: 8 }}>
+                        {detalheAberto.impactos_esperados?.length ? detalheAberto.impactos_esperados.map((imp, idx) => (
+                          <div key={idx} className="sector-row" style={{ alignItems: 'baseline' }}>
+                            <span className="sector-label" style={{ minWidth: 160 }}>{imp.metrica}</span>
+                            <div className="value">{imp.descricao}</div>
+                          </div>
+                        )) : (
+                          <div className="muted">Sem impactos listados.</div>
+                        )}
+                      </div>
+                    </div>
+
+                    {detalheErro && <div className="error" style={{ marginTop: 12 }}>{detalheErro}</div>}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </main>
       </div>
     </div>
   );

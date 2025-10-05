@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Box } from '@mui/material';
-import Layout from './components/layout/Layout';
-import DashboardEconomia from './pages/Economia/DashboardEconomia';
+import Login from './pages/Auth/Login';
+import Signup from './pages/Auth/Signup';
+import Dashboard from './pages/Dashboard/Dashboard';
+import DashboardAlertas from './pages/Alertas/DashboardAlertas';
 
 function App() {
   return (
     <Router>
-      <Box sx={{ display: 'flex', minHeight: '100vh' }}>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Navigate to="/economia" replace />} />
-            <Route path="/economia" element={<DashboardEconomia />} />
-          </Routes>
-        </Layout>
-      </Box>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/alertas" element={<DashboardAlertas />} />
+      </Routes>
     </Router>
   );
 }

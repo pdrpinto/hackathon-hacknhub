@@ -1,0 +1,5 @@
+<!-- Placeholder SVG para logo.png -->
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="60" fill="#0a2541" rx="8"/>
+  <text x="100" y="35" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#E6EEF6" text-anchor="middle">TraceGov</text>
+</svg>
