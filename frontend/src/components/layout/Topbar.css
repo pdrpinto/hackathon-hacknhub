@@ -3,6 +3,7 @@
 .topbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--spacing-lg, 24px);
   padding: var(--spacing-lg, 24px);
   background: rgba(255, 255, 255, 0.7);
@@ -13,8 +14,8 @@
 
 /* Busca */
 .search {
-  flex: 1;
-  max-width: 600px;
+  flex: 0 1 400px;
+  max-width: 400px;
 }
 
 .search input {
@@ -45,16 +46,18 @@
 .chips {
   display: flex;
   gap: var(--spacing-md, 16px);
+  margin-left: auto;
+  margin-right: var(--spacing-md, 16px);
 }
 
 .chip {
   position: relative;
-  padding: 11px 18px;
+  padding: 12px 24px;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--color-border-medium, rgba(10, 42, 65, 0.15));
   border-radius: var(--radius-md, 16px);
-  font-size: 14px;
-  font-weight: var(--font-weight-medium, 500);
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold, 600);
   font-family: var(--font-family);
   color: var(--color-text-dark, #0B2239);
   cursor: pointer;
@@ -95,7 +98,6 @@
 .topbar-icons {
   display: flex;
   gap: var(--spacing-md, 16px);
-  margin-left: auto;
 }
 
 .icon-btn {

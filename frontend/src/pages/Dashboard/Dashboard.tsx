@@ -254,7 +254,7 @@ const Dashboard: React.FC = () => {
               
               <div className="action-buttons">
                 <button className="btn-action" onClick={handleExportCSV} disabled={exportando}>
-                  {exportando ? '⏳ Exportando…' : '📄 Exportar CSV'}
+                  {exportando ? '⏳ Exportando…' : '📄 Exportar PDF/CSV'}
                 </button>
                 <button className="btn-action">📊 Gerar Relatório</button>
               </div>

@@ -171,53 +171,195 @@ const DashboardAlertas: React.FC = () => {
             </div>
           )}
 
-          {/* Modal de Detalhes */}
+          {/* Modal de Detalhes - Página Completa Redesenhada */}
           {detalheAberto && (
-            <div className="modal-backdrop" onClick={() => setDetalheAberto(null)}>
-              <div className="modal" onClick={(e) => e.stopPropagation()}>
-                <div className="modal-header">
-                  <h3>Detalhes do Alerta</h3>
-                  <button className="icon-btn" onClick={() => setDetalheAberto(null)}>✕</button>
+            <div className="detalhes-fullpage" onClick={() => setDetalheAberto(null)}>
+              <div className="detalhes-container" onClick={(e) => e.stopPropagation()}>
+                {/* Header com gradiente */}
+                <div className="detalhes-header">
+                  <div className="detalhes-header-bg"></div>
+                  <div className="detalhes-header-content">
+                    <button className="detalhes-close" onClick={() => setDetalheAberto(null)}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      </svg>
+                    </button>
+                    <div className="detalhes-badges">
+                      <span className={`detalhes-badge badge-sev-${detalheAberto.severidade}`}>
+                        {detalheAberto.severidade === 'critico' && '🚨 CRÍTICO'}
+                        {detalheAberto.severidade === 'atencao' && '⚠️ ATENÇÃO'}
+                        {detalheAberto.severidade === 'informativo' && 'ℹ️ INFO'}
+                      </span>
+                      <span className="detalhes-badge badge-categoria">
+                        {detalheAberto.categoria}
+                      </span>
+                    </div>
+                    <h1 className="detalhes-title">{detalheAberto.titulo}</h1>
+                    <p className="detalhes-subtitle">{detalheAberto.descricao}</p>
+                  </div>
                 </div>
+
                 {detalheLoading ? (
-                  <div className="loading">Carregando…</div>
+                  <div className="detalhes-loading">
+                    <div className="spinner-lg"></div>
+                    <p>Carregando análise completa...</p>
+                  </div>
                 ) : (
-                  <div className="modal-content">
-                    <div className="grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
-                      <div className="card">
-                        <div className="label">Título</div>
-                        <div className="value">{detalheAberto.titulo}</div>
+                  <div className="detalhes-body">
+                    {/* Métricas Principais em Cards Grandes */}
+                    <div className="detalhes-metrics">
+                      <div className="metric-big">
+                        <div className="metric-big-icon blue-gradient">
+                          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 11L12 14L22 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                            <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3.89543 5 5 3.89543 5 3H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                          </svg>
+                        </div>
+                        <div className="metric-big-content">
+                          <span className="metric-big-label">Valor Esperado</span>
+                          <span className="metric-big-value">{detalheAberto.valor_esperado.toLocaleString('pt-BR')}</span>
+                        </div>
                       </div>
-                      <div className="card">
-                        <div className="label">Categoria</div>
-                        <div className="value">{detalheAberto.categoria}</div>
+
+                      <div className="metric-big highlight">
+                        <div className="metric-big-icon yellow-gradient">
+                          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <div className="metric-big-content">
+                          <span className="metric-big-label">Valor Detectado</span>
+                          <span className="metric-big-value alert">{detalheAberto.valor_detectado.toLocaleString('pt-BR')}</span>
+                        </div>
                       </div>
-                      <div className="card">
-                        <div className="label">Severidade</div>
-                        <div className="value">{detalheAberto.severidade}</div>
+
+                      <div className="metric-big">
+                        <div className={`metric-big-icon ${detalheAberto.variacao_percentual >= 0 ? 'green-gradient' : 'red-gradient'}`}>
+                          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            {detalheAberto.variacao_percentual >= 0 ? (
+                              <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            ) : (
+                              <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            )}
+                          </svg>
+                        </div>
+                        <div className="metric-big-content">
+                          <span className="metric-big-label">Variação</span>
+                          <span className={`metric-big-value ${detalheAberto.variacao_percentual >= 0 ? 'positive' : 'negative'}`}>
+                            {detalheAberto.variacao_percentual > 0 ? '+' : ''}{detalheAberto.variacao_percentual.toFixed(1)}%
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="metric-big">
+                        <div className="metric-big-icon purple-gradient">
+                          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                          </svg>
+                        </div>
+                        <div className="metric-big-content">
+                          <span className="metric-big-label">Desvio Padrão</span>
+                          <span className="metric-big-value">{detalheAberto.desvio_padrao.toFixed(1)}σ</span>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="card" style={{ marginTop: 16 }}>
-                      <div className="label">Descrição</div>
-                      <div className="value" style={{ whiteSpace: 'pre-wrap' }}>{detalheAberto.descricao}</div>
-                    </div>
+                    {/* Impactos em Grid Moderno */}
+                    {detalheAberto.impactos_esperados?.length ? (
+                      <div className="detalhes-section">
+                        <div className="section-title-row">
+                          <h2 className="section-title-big">
+                            <span className="section-icon-big">🎯</span>
+                            Impactos Esperados
+                          </h2>
+                          <span className="section-count">{detalheAberto.impactos_esperados.length} impactos identificados</span>
+                        </div>
+                        <div className="impactos-modern-grid">
+                          {detalheAberto.impactos_esperados.map((imp, idx) => (
+                            <div key={idx} className={`impacto-modern impacto-dir-${imp.direcao}`}>
+                              <div className="impacto-modern-header">
+                                <div className="impacto-modern-icon-wrapper">
+                                  <span className="impacto-modern-icon">
+                                    {imp.direcao === 'positivo' && '✅'}
+                                    {imp.direcao === 'negativo' && '⚠️'}
+                                    {imp.direcao === 'neutro' && '➡️'}
+                                  </span>
+                                </div>
+                                <div className="impacto-modern-title">
+                                  <h3>{imp.metrica.replace(/_/g, ' ')}</h3>
+                                  <span className="impacto-modern-cat">{imp.categoria}</span>
+                                </div>
+                              </div>
+                              <p className="impacto-modern-desc">{imp.descricao}</p>
+                              <div className="impacto-modern-meta">
+                                <span className={`meta-pill confianca-${imp.confianca}`}>
+                                  {imp.confianca === 'alta' && '🔥 Alta confiança'}
+                                  {imp.confianca === 'media' && '📊 Média confiança'}
+                                  {imp.confianca === 'baixa' && '💡 Baixa confiança'}
+                                </span>
+                                <span className="meta-pill prazo">⏱️ {imp.prazo}</span>
+                                <span className="meta-pill impacto">� {imp.impacto_estimado}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
 
-                    <div className="card" style={{ marginTop: 16 }}>
-                      <div className="label">Impactos Esperados</div>
-                      <div className="alerta-list" style={{ marginTop: 8 }}>
-                        {detalheAberto.impactos_esperados?.length ? detalheAberto.impactos_esperados.map((imp, idx) => (
-                          <div key={idx} className="sector-row" style={{ alignItems: 'baseline' }}>
-                            <span className="sector-label" style={{ minWidth: 160 }}>{imp.metrica}</span>
-                            <div className="value">{imp.descricao}</div>
-                          </div>
-                        )) : (
-                          <div className="muted">Sem impactos listados.</div>
-                        )}
+                    {/* Ação Recomendada em Destaque */}
+                    <div className="detalhes-section">
+                      <div className="section-title-row">
+                        <h2 className="section-title-big">
+                          <span className="section-icon-big">💡</span>
+                          Ação Recomendada
+                        </h2>
+                      </div>
+                      <div className="acao-box">
+                        <div className="acao-box-icon">🎯</div>
+                        <p className="acao-box-text">{detalheAberto.acao_recomendada}</p>
                       </div>
                     </div>
 
-                    {detalheErro && <div className="error" style={{ marginTop: 12 }}>{detalheErro}</div>}
+                    {/* Footer com Timeline */}
+                    <div className="detalhes-footer-info">
+                      <div className="footer-info-item">
+                        <span className="footer-info-icon">📅</span>
+                        <div className="footer-info-text">
+                          <span className="footer-info-label">Período Analisado</span>
+                          <span className="footer-info-value">{detalheAberto.periodo}</span>
+                        </div>
+                      </div>
+                      <div className="footer-info-divider"></div>
+                      <div className="footer-info-item">
+                        <span className="footer-info-icon">🕐</span>
+                        <div className="footer-info-text">
+                          <span className="footer-info-label">Detectado em</span>
+                          <span className="footer-info-value">
+                            {new Date(detalheAberto.data_deteccao).toLocaleDateString('pt-BR', { 
+                              day: '2-digit', 
+                              month: 'long', 
+                              year: 'numeric' 
+                            })}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="footer-info-divider"></div>
+                      <div className="footer-info-item">
+                        <span className="footer-info-icon">🎚️</span>
+                        <div className="footer-info-text">
+                          <span className="footer-info-label">Prioridade</span>
+                          <span className="footer-info-value">{detalheAberto.prioridade}</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {detalheErro && (
+                      <div className="error-banner-modern">
+                        <span className="error-icon-modern">⚠️</span>
+                        <span>{detalheErro}</span>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

@@ -1,4 +1,4 @@
-/* Login Page */
+/* Login Page - Redesign com Animações */
 
 .auth-page {
   position: relative;
@@ -8,4 +8,264 @@
   justify-content: center;
   padding: var(--spacing-lg, 24px);
   overflow: hidden;
+}
+
+/* Header Animado */
+.auth-header-animated {
+  text-align: center;
+  margin-bottom: 32px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.auth-welcome-text {
+  margin-top: 20px;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.auth-welcome-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #E6EEF6;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, #2EA1FF 0%, #7CDE76 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.auth-welcome-subtitle {
+  font-size: 14px;
+  color: rgba(230, 238, 246, 0.6);
+  margin: 0;
+}
+
+/* Form Animado */
+.auth-form-animated {
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.form-group-animated {
+  animation: slideInLeft 0.5s ease-out both;
+}
+
+.form-group-animated:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.form-group-animated:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.form-group-animated:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.form-group-animated:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Input com Ícone */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.input-with-icon {
+  padding-left: 48px !important;
+}
+
+.input-wrapper:focus-within .input-icon {
+  transform: scale(1.2);
+}
+
+/* Botões Verticais Simétricos */
+.auth-actions-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.btn-primary-animated,
+.btn-secondary-animated {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-animated::before,
+.btn-secondary-animated::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-primary-animated:hover::before,
+.btn-secondary-animated:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary-animated {
+  background: linear-gradient(135deg, #2EA1FF 0%, #0088FF 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(46, 161, 255, 0.4);
+}
+
+.btn-primary-animated:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(46, 161, 255, 0.6);
+}
+
+.btn-primary-animated:active {
+  transform: translateY(-2px) scale(1);
+}
+
+.btn-secondary-animated {
+  background: rgba(230, 238, 246, 0.08);
+  color: #E6EEF6;
+  border: 2px solid rgba(46, 161, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary-animated:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(230, 238, 246, 0.12);
+  border-color: rgba(46, 161, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(46, 161, 255, 0.3);
+}
+
+.btn-secondary-animated:active {
+  transform: translateY(-2px) scale(1);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary-animated:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+.btn-secondary-animated:hover .btn-icon {
+  transform: translateX(-4px);
+}
+
+/* Divisor com Texto */
+.divider-with-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0;
+}
+
+.divider-with-text::before,
+.divider-with-text::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(46, 161, 255, 0.3) 50%, 
+    transparent 100%
+  );
+}
+
+.divider-with-text span {
+  font-size: 12px;
+  color: rgba(230, 238, 246, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Footer Animado */
+.auth-footer-animated {
+  animation: fadeInUp 0.6s ease-out 0.7s both;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .auth-welcome-title {
+    font-size: 24px;
+  }
+  
+  .btn-primary-animated,
+  .btn-secondary-animated {
+    padding: 14px 24px;
+    font-size: 14px;
+  }
 }

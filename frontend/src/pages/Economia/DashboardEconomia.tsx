@@ -122,7 +122,7 @@ const DashboardEconomia: React.FC = () => {
           <Typography variant="h4" fontWeight={700}>Inteligência Econômica</Typography>
           <Typography variant="body1" color="text.secondary">Cascavel em Números – SEMDEC</Typography>
         </Box>
-        <Button variant="contained" onClick={onExportCSV}>Exportar CSV</Button>
+        <Button variant="contained" onClick={onExportCSV}>Exportar PDF/CSV</Button>
       </Box>
 
       {/* Filtros */}
