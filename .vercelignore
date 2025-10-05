@@ -1,0 +1,17 @@
+# Ignorar arquivos desnecessários no deploy
+backend/
+database/
+*.pdf
+*.csv
+*.xlsx
+*.md
+!README.md
+.git/
+.cursor/
+node_modules/
+.env.local
+.env.*.local
+*.log
+
+# Manter apenas o frontend
+!frontend/
