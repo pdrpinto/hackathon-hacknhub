@@ -20,6 +20,7 @@ const DashboardAlertas: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [detalheAberto, setDetalheAberto] = useState<Alerta | null>(null);
+  const [impactosAberto, setImpactosAberto] = useState<Alerta | null>(null);
   const [detalheLoading, setDetalheLoading] = useState(false);
   const [detalheErro, setDetalheErro] = useState<string | null>(null);
 
@@ -161,8 +162,8 @@ const DashboardAlertas: React.FC = () => {
                 ) : (
                   alertas.map((a) => (
                     <div key={a.id} className="alerta-item" onClick={() => abrirDetalhe(a)} style={{ cursor: 'pointer' }}>
-                      {/* Reutiliza o componente existente */}
-                      <AlertaCard alerta={a} />
+                      {/* Card com botão de Impactos que abre modal específico */}
+                      <AlertaCard alerta={a} onOpenImpactos={(al) => setImpactosAberto(al)} />
                     </div>
                   ))
                 )}
@@ -219,6 +220,43 @@ const DashboardAlertas: React.FC = () => {
                     {detalheErro && <div className="error" style={{ marginTop: 12 }}>{detalheErro}</div>}
                   </div>
                 )}
+              </div>
+            </div>
+          )}
+
+          {/* Modal Impactos Esperados - visual mais rico */}
+          {impactosAberto && (
+            <div className="modal-backdrop" onClick={() => setImpactosAberto(null)}>
+              <div className="modal impactos-modal" onClick={(e) => e.stopPropagation()}>
+                <div className="modal-header">
+                  <h3>Impactos Esperados — {impactosAberto.titulo}</h3>
+                  <button className="icon-btn" onClick={() => setImpactosAberto(null)}>✕</button>
+                </div>
+                <div className="modal-content">
+                  <div className="grid" style={{ gridTemplateColumns: '1fr', gap: 12 }}>
+                    {impactosAberto.impactos_esperados?.length ? impactosAberto.impactos_esperados.map((imp, i) => (
+                      <div key={i} className="card impacto-item">
+                        <div className="sector-row">
+                          <span className="sector-label" style={{ minWidth: 180 }}>{imp.metrica.replace(/_/g, ' ').toUpperCase()}</span>
+                          <div style={{ width: '100%' }}>
+                            <div className="sector-bar-bg">
+                              <div className={`sector-bar ${imp.direcao === 'positivo' ? 'highlighted' : ''}`} style={{ width: imp.confianca === 'alta' ? '90%' : imp.confianca === 'media' ? '65%' : '40%' }} />
+                            </div>
+                            <div className="impacto-meta">
+                              <span className={`badge ${imp.direcao}`}>{imp.direcao}</span>
+                              <span className="muted">Confiança: {imp.confianca}</span>
+                              <span className="muted">Prazo: {imp.prazo}</span>
+                              <span className="muted">Estimativa: {imp.impacto_estimado}</span>
+                            </div>
+                            <div className="value" style={{ marginTop: 8 }}>{imp.descricao}</div>
+                          </div>
+                        </div>
+                      </div>
+                    )) : (
+                      <div className="muted">Sem impactos listados.</div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           )}

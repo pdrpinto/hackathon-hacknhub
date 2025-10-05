@@ -1,0 +1,42 @@
+/* AlertaCard - visual consistente com o Dashboard */
+.alerta-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border-light, rgba(10, 42, 65, 0.08));
+  border-left: 6px solid rgba(10, 42, 65, 0.25);
+  border-radius: var(--radius-lg, 20px);
+  padding: var(--spacing-lg, 24px);
+  box-shadow: var(--shadow-card, 0 4px 16px rgba(0,0,0,0.08));
+}
+.alerta-card:hover { box-shadow: var(--shadow-elevated); }
+
+/* Severidade */
+.sev-critico { border-left-color: #ff4757; }
+.sev-atencao { border-left-color: var(--color-yellow-accent); }
+.sev-informativo { border-left-color: var(--color-blue-primary); }
+
+.alerta-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.chips { display: flex; gap: 8px; margin-bottom: 6px; }
+.chip { padding: 4px 10px; border-radius: 999px; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: .4px; }
+.chip-sev.sev-critico { background: #ff4757; color: #fff; }
+.chip-sev.sev-atencao { background: var(--color-yellow-accent); color: #0b2239; }
+.chip-sev.sev-informativo { background: var(--color-blue-primary); color: #fff; }
+.chip-cat { background: rgba(10,42,65,.08); color: var(--color-text-dark); }
+
+.alerta-title { font-size: 18px; font-weight: 700; color: var(--color-text-dark); margin: 2px 0 6px; }
+.alerta-desc { font-size: 14px; color: rgba(11,34,57,.8); }
+
+.btn-chip { border: 1px solid var(--color-border-light); background: #fff; color: var(--color-text-dark); padding: 8px 12px; border-radius: 12px; cursor: pointer; font-weight: 600; }
+.btn-chip:hover { background: rgba(10,42,65,.04); }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 16px; margin: 14px 0 6px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border-light); }
+.metric-label { color: rgba(11,34,57,.6); font-size: 12px; text-transform: uppercase; font-weight: 600; }
+.metric-value { font-size: 18px; font-weight: 700; color: var(--color-text-dark); }
+.metric-value.delta-pos { color: #0f9d58; }
+.metric-value.delta-neg { color: #d93025; }
+
+.acao-card { background: rgba(255,255,255,.6); border: 1px solid var(--color-border-light); border-radius: 12px; padding: 12px; margin-top: 10px; }
+.acao-label { font-size: 11px; text-transform: uppercase; color: rgba(11,34,57,.6); font-weight: 700; margin-bottom: 4px; }
+.acao-text { font-size: 14px; color: var(--color-text-dark); }
+
+.alerta-footer { display: flex; justify-content: space-between; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--color-border-light); font-size: 12px; color: rgba(11,34,57,.7); }
+@media (max-width: 720px){ .metrics-grid { grid-template-columns: repeat(2,1fr);} .alerta-footer{flex-direction: column;} }
