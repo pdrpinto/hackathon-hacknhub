@@ -193,7 +193,7 @@ Este projeto foi desenvolvido para o Hackathon e é de uso educacional.
 
 ## 👥 Equipe
 
-Desenvolvido por: [@Munhoz](https://github.com/munhoz) e [@pinto](https://github.com/pinto)
+Desenvolvido por: [@Munhoz](https://github.com/munhoz), [@pinto](https://github.com/pinto) e [@Vitorea90](https://github.com/Vitorea90)
 
 ---
 

@@ -90,6 +90,8 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm, 8px);
+  position: relative;
+  overflow: hidden;
 }
 
 .nav-item span {
@@ -106,6 +108,43 @@
   background: rgba(46, 161, 255, 0.15);
   color: var(--color-blue-primary, #2EA1FF);
   font-weight: var(--font-weight-semibold, 600);
+}
+
+/* Badge para contadores no menu */
+.nav-badge {
+  margin-left: auto;
+  background: #ff4757;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.35);
+  animation: badgePulse 2.2s infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+/* Ripple sutil ao hover */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,161,255,0.35) 0%, rgba(46,161,255,0) 70%);
+  left: 12px;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: all 0.35s ease;
+}
+
+.nav-item:hover::after {
+  opacity: 1;
+  transform: scale(1.8);
 }
 
 /* Responsivo */

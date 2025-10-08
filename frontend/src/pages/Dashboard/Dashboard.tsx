@@ -5,6 +5,7 @@ import AuthEllipses from '../../components/common/AuthEllipses';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './Dashboard.css';
 import { useFiltersStore } from '../../store/filters';
+import GlobalFilters from '../../components/common/GlobalFilters';
 import { useKpisEconomia, useSerieEconomia, useTopCnaes } from '../../hooks/useEconomia';
 import { bairrosAPI, economiaAPI } from '../../services/api';
 import { downloadBlob } from '../../utils/download';
@@ -19,7 +20,7 @@ function toMonthlySeries(serie: { ano: number; valor: number }[]) {
 
 const Dashboard: React.FC = () => {
   // Filtros globais
-  const { ano, ano_inicio, ano_fim, regiao, bairro_id, setAno, setPeriodo, setRegiao, setBairroId } = useFiltersStore();
+  const { ano, ano_inicio, ano_fim, regiao, bairro_id } = useFiltersStore();
 
   // Carregar bairros para o seletor (por região)
   const [bairros, setBairros] = useState<BairroItem[]>([]);
@@ -113,43 +114,7 @@ const Dashboard: React.FC = () => {
             </div>
           )}
           
-          {/* Filtros */}
-          <div className="card" style={{ marginBottom: 24 }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(140px, 1fr))', gap: 16 }}>
-              <div>
-                <label className="label">Ano</label>
-                <input className="input" type="number" value={ano ?? ''} onChange={(e) => setAno(Number(e.target.value) || undefined)} />
-              </div>
-              <div>
-                <label className="label">Período - Início</label>
-                <input className="input" type="number" value={ano_inicio ?? ''} onChange={(e) => setPeriodo(Number(e.target.value) || undefined, ano_fim)} />
-              </div>
-              <div>
-                <label className="label">Período - Fim</label>
-                <input className="input" type="number" value={ano_fim ?? ''} onChange={(e) => setPeriodo(ano_inicio, Number(e.target.value) || undefined)} />
-              </div>
-              <div>
-                <label className="label">Região</label>
-                <select className="input" value={regiao} onChange={(e) => { setRegiao(e.target.value as any); setBairroId(undefined); }}>
-                  <option value="">Todas</option>
-                  <option value="Centro">Centro</option>
-                  <option value="Norte">Norte</option>
-                  <option value="Sul">Sul</option>
-                  <option value="Leste">Leste</option>
-                  <option value="Oeste">Oeste</option>
-                </select>
-              </div>
-              <div>
-                <label className="label">Bairro</label>
-                <select className="input" value={bairro_id ?? ''} onChange={(e) => setBairroId(e.target.value ? Number(e.target.value) : undefined)}>
-                  <option value="">Todos</option>
-                  {bairros.map((b) => (
-                    <option key={b.id} value={b.id}>{b.nome}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
+          <GlobalFilters />
 
           {/* Gráficos principais */}
           <div className="grid charts-grid">
