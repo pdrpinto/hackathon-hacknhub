@@ -3,6 +3,18 @@ import { NavLink } from 'react-router-dom';
 import { Assets } from '../../utils/assets';
 import './Sidebar.css';
 import { anomaliasAPI } from '../../services/api';
+import {
+  ChartBarIcon,
+  AlertIcon,
+  MapIcon,
+  TrendingUpIcon,
+  SearchIcon,
+  FileTextIcon,
+  ActivityIcon,
+  StarIcon,
+  SettingsIcon,
+  HelpCircleIcon,
+} from '../common/Icons';
 
 const useAlertasBadge = () => {
   const [count, setCount] = React.useState<number>(0);
@@ -43,43 +55,43 @@ const Sidebar: React.FC = () => {
         <h3 className="nav-title">ANÁLISE</h3>
         <ul className="nav-list">
           <NavLink to="/dashboard" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Visão Geral">📊</span> Visão Geral
+            <ChartBarIcon size={18} /> Visão Geral
           </NavLink>
           <NavLink to="/alertas" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Alertas">🚨</span> Alertas
+            <AlertIcon size={18} /> Alertas
             {alertaCount > 0 && <span className="nav-badge">{alertaCount}</span>}
           </NavLink>
           <NavLink to="/mapas" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Mapas">🗺️</span> Mapas
+            <MapIcon size={18} /> Mapas
           </NavLink>
           <NavLink to="/predicoes" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Predições">📈</span> Predições
+            <TrendingUpIcon size={18} /> Predições
           </NavLink>
           <NavLink to="/explorar" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Explorar Dados">🔎</span> Explorar Dados
+            <SearchIcon size={18} /> Explorar Dados
           </NavLink>
         </ul>
 
         <h3 className="nav-title">OPERAÇÕES</h3>
         <ul className="nav-list">
           <NavLink to="/relatorios" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Relatórios">📄</span> Relatórios
+            <FileTextIcon size={18} /> Relatórios
           </NavLink>
           <NavLink to="/atividade" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Atividade">🧭</span> Atividade
+            <ActivityIcon size={18} /> Atividade
           </NavLink>
           <NavLink to="/favoritos" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Favoritos">⭐</span> Favoritos
+            <StarIcon size={18} /> Favoritos
           </NavLink>
         </ul>
 
         <h3 className="nav-title">ADMINISTRAÇÃO</h3>
         <ul className="nav-list">
           <NavLink to="/config" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Configurações">⚙️</span> Configurações
+            <SettingsIcon size={18} /> Configurações
           </NavLink>
           <NavLink to="/ajuda" className={({ isActive }) => `nav-item${isActive ? ' active' : ''}`}>
-            <span role="img" aria-label="Ajuda">❓</span> Ajuda
+            <HelpCircleIcon size={18} /> Ajuda
           </NavLink>
         </ul>
       </nav>

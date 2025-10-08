@@ -31,7 +31,7 @@ const Login: React.FC = () => {
             src={Assets.logo}
             alt="TraceGov"
             className="auth-logo auth-logo-img-giant"
-            style={{ height: 160, width: 'auto' }}
+            style={{ height: 160, width: 'auto', objectFit: 'contain', maxWidth: '100%' }}
           />
           <div className="auth-welcome-text">
             <h2 className="auth-welcome-title">Bem-vindo de volta</h2>

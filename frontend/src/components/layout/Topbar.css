@@ -1,4 +1,4 @@
-/* Topbar - Header do dashboard */
+/* Topbar - Header do dashboard com design Foz do Iguaçu (azul + listras amarelas) */
 
 .topbar {
   display: flex;
@@ -6,39 +6,83 @@
   justify-content: space-between;
   gap: var(--spacing-lg, 24px);
   padding: var(--spacing-lg, 24px);
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-border-light, rgba(10, 42, 65, 0.08));
+  background: linear-gradient(135deg, #0A2541 0%, #1976D2 100%);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #FFD700;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Listras amarelas decorativas */
+.topbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFD700 0px,
+    #FFD700 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  animation: slide 20s linear infinite;
+}
+
+.topbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  width: 120%;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFD700 0px,
+    #FFD700 15px,
+    transparent 15px,
+    transparent 30px
+  );
+  animation: slide 15s linear infinite reverse;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(40px); }
 }
 
 /* Busca */
 .search {
   flex: 0 1 400px;
   max-width: 400px;
+  z-index: 1;
 }
 
 .search input {
   width: 100%;
   padding: 14px 20px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--color-border-medium, rgba(10, 42, 65, 0.15));
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: var(--radius-md, 16px);
   font-size: 15px;
   font-family: var(--font-family);
-  color: var(--color-text-dark, #0B2239);
+  color: #FFFFFF;
   transition: all var(--transition-normal, 0.3s ease);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   outline: none;
 }
 
 .search input::placeholder {
-  color: rgba(11, 34, 57, 0.4);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .search input:focus {
-  border-color: var(--color-blue-primary, #2EA1FF);
-  box-shadow: 0 4px 16px rgba(46, 161, 255, 0.15);
+  border-color: #FFD700;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.3);
   transform: translateY(-1px);
 }
 
@@ -48,22 +92,28 @@
   gap: var(--spacing-md, 16px);
   margin-left: auto;
   margin-right: var(--spacing-md, 16px);
+  z-index: 1;
 }
 
 .chip {
   position: relative;
   padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid var(--color-border-medium, rgba(10, 42, 65, 0.15));
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.4);
   border-radius: var(--radius-md, 16px);
   font-size: 15px;
   font-weight: var(--font-weight-semibold, 600);
   font-family: var(--font-family);
-  color: var(--color-text-dark, #0B2239);
+  color: #FFFFFF;
   cursor: pointer;
   transition: all var(--transition-normal, 0.3s ease);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+}
+
+.chip-interactive {
+  cursor: pointer;
 }
 
 .chip::before {
@@ -74,15 +124,16 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(46, 161, 255, 0.2);
+  background: rgba(255, 215, 0, 0.3);
   transform: translate(-50%, -50%);
   transition: width 0.6s, height 0.6s;
 }
 
 .chip:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  border-color: var(--color-blue-primary, #2EA1FF);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+  border-color: #FFD700;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .chip:hover::before {
@@ -94,10 +145,61 @@
   transform: translateY(0);
 }
 
+/* Dropdown de chips */
+.chip-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: rgba(10, 37, 65, 0.98);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  padding: 8px;
+  z-index: 1000;
+  animation: dropdownFade 0.2s ease-out;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chip-dropdown-item {
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+  font-family: var(--font-family);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chip-dropdown-item:hover {
+  background: rgba(255, 215, 0, 0.2);
+  color: #FFD700;
+  transform: translateX(4px);
+}
+
 /* Ícones */
 .topbar-icons {
   display: flex;
   gap: var(--spacing-md, 16px);
+  z-index: 1;
 }
 
 .icon-btn {
@@ -105,20 +207,23 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid var(--color-border-medium, rgba(10, 42, 65, 0.15));
-  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   font-size: 20px;
   cursor: pointer;
   transition: all var(--transition-normal, 0.3s ease);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .icon-btn:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  border-color: var(--color-blue-primary, #2EA1FF);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+  border-color: #FFD700;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 
 /* Badge de notificação */
@@ -137,7 +242,8 @@
   align-items: center;
   justify-content: center;
   animation: pulse 2s infinite;
-  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.6);
+  border: 2px solid rgba(10, 37, 65, 0.8);
 }
 
 @keyframes pulse {
