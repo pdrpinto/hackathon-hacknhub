@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthEllipses from '../../components/common/AuthEllipses';
 import AuthCard from '../../components/common/AuthCard';
+import PageTransition from '../../components/PageTransition';
 import { Assets } from '../../utils/assets';
 import './Login.css';
 
@@ -15,25 +16,24 @@ const Login: React.FC = () => {
   };
 
   const handleGovLogin = () => {
-    // Fluxo placeholder do Gov.br (OAuth) – troque pela sua rota backend quando disponível
-    // Exemplo: window.location.href = '/api/auth/govbr/login'
-    const govAuthUrl = 'https://sso.acesso.gov.br/';
-    window.open(govAuthUrl, '_blank', 'noopener,noreferrer');
+    // Funcionalidade em desenvolvimento
+    alert('🔒 Em Breve!\n\nA integração com Gov.br está em desenvolvimento.\nPor enquanto, use o login tradicional.');
   };
 
   return (
-    <div className="auth-page">
-      <AuthEllipses />
-      
-      <AuthCard>
-        <div className="auth-header-animated">
-          <img
-            src={Assets.logo}
-            alt="TraceGov"
-            className="auth-logo auth-logo-img-giant"
-            style={{ height: 160, width: 'auto', objectFit: 'contain', maxWidth: '100%' }}
-          />
-          <div className="auth-welcome-text">
+    <PageTransition>
+      <div className="auth-page">
+        <AuthEllipses />
+        
+        <AuthCard>
+          <div className="auth-header-animated">
+            <img
+              src={Assets.logo}
+              alt="TraceGov"
+              className="auth-logo auth-logo-img-giant"
+              style={{ height: 160, width: 'auto', objectFit: 'contain', maxWidth: '100%' }}
+            />
+            <div className="auth-welcome-text">
             <h2 className="auth-welcome-title">Bem-vindo de volta</h2>
             <p className="auth-welcome-subtitle">Entre para acessar sua conta</p>
           </div>
@@ -93,6 +93,8 @@ const Login: React.FC = () => {
                 background: 'linear-gradient(135deg, #EAF2FF 0%, #FFFFFF 100%)',
                 color: '#0B2D6B',
                 fontWeight: 600,
+                opacity: 0.7,
+                cursor: 'not-allowed',
               }}
             >
               <span style={{ display: 'inline-flex', alignItems: 'center' }}>
@@ -112,29 +114,31 @@ const Login: React.FC = () => {
               </span>
               <span className="btn-text">Entrar com Gov.br</span>
 
-              {/* Selo verificado */}
+              {/* Badge Em Breve com Cadeado */}
               <span
-                className="govbr-badge-verified"
+                className="govbr-badge-soon"
                 aria-hidden
                 style={{
                   position: 'absolute',
-                  top: -6,
-                  right: -6,
-                  width: 24,
-                  height: 24,
-                  borderRadius: '9999px',
-                  background: '#fff',
-                  border: '3px solid #28A745',
-                  boxShadow: '0 2px 8px rgba(40, 167, 69, 0.35)',
-                  display: 'grid',
-                  placeItems: 'center',
-                  color: '#28A745',
-                  fontSize: 14,
+                  top: -10,
+                  right: -10,
+                  padding: '4px 10px',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                  border: '2px solid #fff',
+                  boxShadow: '0 4px 12px rgba(255, 215, 0, 0.5)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 4,
+                  color: '#0A2541',
+                  fontSize: 11,
                   fontWeight: 800,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px',
                 }}
-                title="Verificado"
+                title="Funcionalidade em desenvolvimento"
               >
-                ✓
+                🔒 Em Breve
               </span>
             </button>
             
@@ -159,6 +163,7 @@ const Login: React.FC = () => {
         </div>
       </AuthCard>
     </div>
+    </PageTransition>
   );
 };
 

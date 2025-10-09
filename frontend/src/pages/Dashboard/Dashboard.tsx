@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Sidebar from '../../components/layout/Sidebar';
 import Topbar from '../../components/layout/Topbar';
 import AuthEllipses from '../../components/common/AuthEllipses';
+import PageTransition from '../../components/PageTransition';
 import { LineChart, Line, BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './Dashboard.css';
 import { KPIS_FOZ, TOP_SETORES_FOZ, ALERTAS_FOZ } from '../../data/fozDoIguacu';
@@ -76,7 +77,8 @@ const Dashboard: React.FC = () => {
   const alertaCritico = ALERTAS_FOZ.find(a => a.severidade === 'crítico');
 
   return (
-    <div className="dashboard-layout">
+    <PageTransition>
+      <div className="dashboard-layout">
       <AuthEllipses />
       <Sidebar />
       
@@ -300,6 +302,7 @@ const Dashboard: React.FC = () => {
         </main>
       </div>
     </div>
+    </PageTransition>
   );
 };
 

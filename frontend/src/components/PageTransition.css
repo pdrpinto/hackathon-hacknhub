@@ -1,0 +1,115 @@
+/* Animação de entrada para páginas */
+.page-transition-wrapper {
+  animation: pageEnter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+}
+
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.01);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Animação suave para elementos internos (cascade effect) */
+.page-transition-wrapper > * {
+  animation: cascadeIn 0.5s ease-out 0.1s both;
+}
+
+.page-transition-wrapper > *:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.page-transition-wrapper > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.page-transition-wrapper > *:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+@keyframes cascadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Transição de saída (opcional - para navegação mais suave) */
+.page-exit {
+  animation: pageExit 0.4s ease-in forwards;
+}
+
+@keyframes pageExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.96);
+    filter: blur(2px);
+  }
+}
+
+/* Estilos específicos para Login → Dashboard */
+.dashboard-enter {
+  animation: dashboardEnter 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes dashboardEnter {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.95);
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(10px) scale(1.02);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Animação de loading suave */
+.page-loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsividade - reduções de movimento para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-wrapper,
+  .page-transition-wrapper > *,
+  .page-exit,
+  .dashboard-enter {
+    animation: none !important;
+  }
+}
