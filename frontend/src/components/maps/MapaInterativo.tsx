@@ -65,7 +65,7 @@ const MapaInterativo: React.FC<MapaInterativoProps> = ({
   const featureCentersRef = useRef<Record<number, [number, number]>>({});
 
   // Centro de Cascavel, PR
-  const cascavelCenter: LatLngExpression = useMemo<LatLngExpression>(() => ([-24.955, -53.455]), []);
+  const cascavelCenter: LatLngExpression = useMemo<LatLngExpression>(() => ([-25.5163, -54.5854]), []);
 
   // Buscar dados do mapa e POIs
   const fetchMapData = useCallback(async () => {

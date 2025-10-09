@@ -1,0 +1,269 @@
+/* Predições e Cenários - Foz do Iguaçu */
+
+/* Filtro de Setores */
+.setores-filtro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+  animation: fadeSlideUp 0.6s ease-out;
+}
+
+.setor-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  border-left: 4px solid #1976D2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.setor-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.setor-card.active {
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.08) 0%, rgba(10, 37, 65, 0.05) 100%);
+  border-left-width: 6px;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.25);
+}
+
+.setor-icon {
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.setor-info {
+  flex: 1;
+}
+
+.setor-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0A2541;
+  margin: 0 0 8px 0;
+}
+
+.setor-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-medium);
+}
+
+.setor-stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cenarios-selector {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  justify-content: center;
+}
+
+.cenario-btn {
+  padding: 16px 32px;
+  border: 2px solid rgba(10, 37, 65, 0.2);
+  background: white;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-family);
+  color: var(--color-text-dark);
+}
+
+.cenario-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.cenario-btn.active {
+  border-color: currentColor;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.cenario-btn.active.otimista {
+  background: linear-gradient(135deg, #26de81 0%, #20bf6b 100%);
+  border-color: #26de81;
+}
+
+.cenario-btn.active.realista {
+  background: linear-gradient(135deg, #1976D2 0%, #0A2541 100%);
+  border-color: #1976D2;
+}
+
+.cenario-btn.active.pessimista {
+  background: linear-gradient(135deg, #ff4757 0%, #c23616 100%);
+  border-color: #ff4757;
+}
+
+.cenario-desc-card {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
+  border-left: 4px solid #FFD700;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+}
+
+.charts-grid-predicoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: 24px;
+}
+
+.predicao-card {
+  animation: fadeSlideUp 0.6s ease-out backwards;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.predicao-insight {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(25, 118, 210, 0.08);
+  border-left: 3px solid #1976D2;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-medium);
+}
+
+.predicao-insight strong {
+  color: #1976D2;
+  margin-right: 6px;
+}
+
+/* Recomendações Estratégicas */
+.recomendacoes-card {
+  padding: 32px;
+}
+
+.recomendacoes-card h3 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: var(--color-text-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recomendacoes-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.recomendacao-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, rgba(10, 37, 65, 0.03) 100%);
+  border-radius: 16px;
+  border-left: 4px solid #1976D2;
+  transition: all 0.3s ease;
+}
+
+.recomendacao-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.recomendacao-icon {
+  font-size: 32px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.recomendacao-item strong {
+  display: block;
+  font-size: 16px;
+  color: #1976D2;
+  margin-bottom: 8px;
+}
+
+.recomendacao-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--color-text-medium);
+  margin: 0;
+}
+
+/* KPIs de Referência */
+.kpis-predicoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.kpi-predicao {
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 215, 0, 0.03) 100%);
+  border-top: 3px solid #FFD700;
+  transition: all 0.3s ease;
+}
+
+.kpi-predicao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.kpi-predicao-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.kpi-predicao-valor {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1976D2;
+  margin-bottom: 4px;
+}
+
+.kpi-predicao-sub {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cenarios-selector {
+    flex-direction: column;
+  }
+
+  .charts-grid-predicoes {
+    grid-template-columns: 1fr;
+  }
+
+  .kpis-predicoes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
