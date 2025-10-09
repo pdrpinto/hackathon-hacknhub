@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthEllipses from '../../components/common/AuthEllipses';
 import AuthCard from '../../components/common/AuthCard';
+import PageTransition from '../../components/PageTransition';
 import { Assets } from '../../utils/assets';
 import './Signup.css';
 
@@ -15,18 +16,19 @@ const Signup: React.FC = () => {
   };
 
   return (
-    <div className="auth-page">
-      <AuthEllipses />
-      
-      <AuthCard>
-        <div className="auth-header-animated">
-          <img src={Assets.logo} alt="TraceGov" className="auth-logo" />
-          <div className="auth-welcome-text">
-            <h2 className="auth-welcome-title">Crie sua conta</h2>
-            <p className="auth-welcome-subtitle">Preencha os dados para começar</p>
-          </div>
-        </div>
+    <PageTransition>
+      <div className="auth-page">
+        <AuthEllipses />
         
+        <AuthCard>
+          <div className="auth-header-animated">
+            <img src={Assets.logo} alt="TraceGov" className="auth-logo" />
+            <div className="auth-welcome-text">
+              <h2 className="auth-welcome-title">Crie sua conta</h2>
+              <p className="auth-welcome-subtitle">Preencha os dados para começar</p>
+            </div>
+          </div>
+          
         <form onSubmit={handleSignup} className="auth-form-animated">
           <div className="form-grid">
             <div className="form-group form-group-animated">
@@ -113,6 +115,7 @@ const Signup: React.FC = () => {
         </div>
       </AuthCard>
     </div>
+    </PageTransition>
   );
 };
 
